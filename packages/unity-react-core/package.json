@@ -30,7 +30,7 @@
   "scripts": {
     "create": "plop",
     "dev": "yarn storybook & yarn testui",
-    "lint": "eslint --fix 'src/**/*.{js,jsx,ts,tsx}' --ignore-path ../../.eslintignore",
+    "lint": "eslint --fix 'src/**/*.{js,jsx}' --ignore-path ../../.eslintignore",
     "jest": "jest --config=./jest.config.js --silent --coverage",
     "test": "vitest --watch=false",
     "testui": "vitest --ui",

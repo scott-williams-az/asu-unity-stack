@@ -1,7 +1,6 @@
 import React, { ReactElement } from "react";
 
 export enum DividerType {
-  SECTION = "",
   COPY = "copy",
 }
 export interface DividerProps {

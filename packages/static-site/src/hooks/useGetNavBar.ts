@@ -1,4 +1,4 @@
-import type { NavTreeProps } from "@asu/component-header/dist/main.d.ts";
+import { NavTreeProps } from "@asu/component-header";
 import { useNavigate, useLocation } from "react-router-dom";
 const basePath = import.meta.env.VITE_APP_BASE_PATH;
 

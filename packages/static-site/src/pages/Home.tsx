@@ -1,6 +1,7 @@
-import { routerUrl } from "../hooks/useGetNavBar";
+
 import Card from "../components/Card";
 import PackageCards from "../components/PackageCards";
+import { routerUrl } from "../hooks/useRoutes";
 
 export const Home = () => {
   return (

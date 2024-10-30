@@ -13,7 +13,8 @@
   "scripts": {
     "lerna-clean": "lerna clean && rm -rf ./node_modules",
     "lint": "lerna run lint",
-    "build-storybook": "lerna run build-storybook && gulp",
+    "build-static-site": "lerna run --scope @asu/static-site build",
+    "build-storybook": "yarn build-static-site && lerna run build-storybook",
     "build-components-core": "lerna run --scope @asu/components-core build",
     "build": " yarn prebuild && lerna run --ignore @asu/components-core --ignore @asu/component-carousel build && yarn postbuild",
     "prebuild": "yarn build-components-core && yarn lint",

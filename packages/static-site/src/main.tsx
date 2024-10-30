@@ -5,14 +5,14 @@ import "./index.css";
 
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Home } from "./pages/Home.tsx";
-import { routerUrl } from "./hooks/useGetNavBar.ts";
 import { HeaderGuide } from "./pages/HeaderGuide.tsx";
 import { DataLayerGuide } from "./pages/DataLayerGuide.tsx";
 
+import { routerUrl } from "./hooks/useRoutes.ts";
 
-const router = createBrowserRouter([
+const routes = [
   {
-    path: `${routerUrl.HOME}`,
+    path: routerUrl.HOME,
     element: <App />,
     children: [
       {
@@ -29,7 +29,9 @@ const router = createBrowserRouter([
       },
     ],
   },
-]);
+];
+
+const router = createBrowserRouter(routes);
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>

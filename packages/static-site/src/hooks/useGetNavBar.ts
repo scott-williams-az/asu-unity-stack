@@ -1,16 +1,8 @@
 import { NavTreeProps } from "@asu/component-header";
 import { useNavigate, useLocation } from "react-router-dom";
-const basePath = import.meta.env.VITE_APP_BASE_PATH;
+import { routerUrl } from "./useRoutes";
 
-const pathJoin = (...parts:string[]): string => {
-  const sep = "/";
-  return parts.join(sep).replace(new RegExp(sep+'{1,}', 'g'), sep)
-};
-export const routerUrl = {
-  HOME: basePath,
-  DATALAYERGUIDE: pathJoin(basePath, "gtm-datalayer", "index.html"),
-  HEADERGUIDE: pathJoin(basePath, "asuheader", "index.html"),
-};
+
 
 function useGetNavBar() {
   const navigate = useNavigate();

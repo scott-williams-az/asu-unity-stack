@@ -1,3 +1,11 @@
+# [@asu/unity-bootstrap-theme-v1.15.2](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.15.1...@asu/unity-bootstrap-theme-v1.15.2) (2024-10-30)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** update web directory profile address and email ([444e16f](https://github.com/ASU/asu-unity-stack/commit/444e16f283522601bf388a9ae5d0ddc58f31afdb))
+* **unity-bootstrap-theme:** update webdir styles ([e9602f0](https://github.com/ASU/asu-unity-stack/commit/e9602f01c9a150d8d8a46cbd9a2a513f351f2af3))
+
 # [@asu/unity-bootstrap-theme-v1.15.1](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.15.0...@asu/unity-bootstrap-theme-v1.15.1) (2024-10-16)
 
 

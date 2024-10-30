@@ -1,6 +1,5 @@
+import { useResolvedPath } from "react-router-dom";
 import Card, { CardProps } from "./Card";
-
-const basePath = import.meta.env.VITE_APP_BASE_PATH;
 
 interface PackageJson {
   name: string;
@@ -13,21 +12,22 @@ const packages: Record<string, { default: PackageJson }> = import.meta.glob(
   { eager: true }
 );
 
-const cards: CardProps[] = [];
-
-for (const key in packages) {
-  const p = packages[key].default;
-  if (p.private !== true) {
-    cards.push({
-      title: p.name,
-      description: p.description,
-      href: `${basePath}${p.name}/index.html`,
-      linkLabel: "Launch",
-    });
-  }
-}
-
 const PackageCards = () => {
+
+  const cards: CardProps[] = [];
+
+  for (const key in packages) {
+    const p = packages[key].default;
+    if (p.private !== true) {
+      cards.push({
+        title: p.name,
+        description: p.description,
+        href: useResolvedPath(`../${p.name}/index.html`).pathname,
+        linkLabel: "Launch",
+      });
+    }
+  }
+
   return (
     <>
       {cards.map((card, index) => (

@@ -1,8 +1,8 @@
-const basePath = import.meta.env.VITE_APP_BASE_PATH;
-
+import {Link, useResolvedPath} from "react-router-dom";
+import { useRoutes } from "../hooks/useRoutes";
 
 export const HeaderGuide = () => {
-
+  const { DATALAYERGUIDE } = useRoutes();
   return (
     <div className="container my-6">
     <div className="row">
@@ -18,7 +18,7 @@ export const HeaderGuide = () => {
           <h3>Components Header</h3>
           <p><strong>Preferred:</strong> Intended for use within platforms and applications, this
             header variant is built using React as a peer dependency and can be implemented
-            using the <a href={`${basePath}@asu/component-header/index.html`}>
+            using the <a href={useResolvedPath("../@asu/component-header/index.html").pathname}>
               @asu/component-header</a> package. This version of
             the header does not bundle Cookie Consent or Google Tag Manager.
             Site developers using this header must implement Cookie Consent
@@ -31,7 +31,7 @@ export const HeaderGuide = () => {
           <p><strong>Deprecated in favor of Component Header:</strong>
             Intended for use within platforms and applications, this
             header variant is built using Preact and can be implemented
-            using the <a href={`${basePath}@asu/components-library/index.html`}>
+            using the <a href={useResolvedPath("../@asu/components-library/index.html").pathname}>
               @asu/components-library</a> package. This version of
             the header does not bundle Cookie Consent or Google Tag Manager.
             Site developers using this header must implement Cookie Consent
@@ -52,7 +52,7 @@ export const HeaderGuide = () => {
 
           <h3>Integrated CMS header modules and plugins</h3>
           <p>CMS modules and plugins providing the ASU header should implement
-            it using the <a href={`${basePath}@asu/components-header/index.html`}>
+            it using the <a href={useResolvedPath("../@asu/components-header/index.html").pathname}>
               @asu/components-header</a> package and should also
             bundle the Component Cookie Consent component, and Google Tag
             Manager code. Modules and plugins should provide configurability so
@@ -65,7 +65,7 @@ export const HeaderGuide = () => {
 
           <h3>Unity Bootstrap Theme header</h3>
           <p>Primarily used as a reference point, the Bootstrap header
-            provided via the <a href={`${basePath}@asu/unity-bootstrap-theme/index.html`}>
+            provided via the <a href={useResolvedPath("../@asu/unity-bootstrap-theme/index.html").pathname}>
               @asu/unity-bootstrap-theme</a> package is a plain HTML and
             CSS Web Standards 2 header implementation built without embedded
             components for Cookie Consent and Google Tag Manager. Site
@@ -93,8 +93,8 @@ export const HeaderGuide = () => {
             the Unity package registry."</p>
 
           <h2>Google Tag Manager (GTM)</h2>
-          <p>See the <a href={`${basePath}gtm-datalayer/index.html`}>Google Tag Manager (GTM) and Data
-          Layer</a> page for details on using Google Tag Manager in your site
+          <p>See the <Link to={DATALAYERGUIDE}>Google Tag Manager (GTM) and Data
+          Layer</Link> page for details on using Google Tag Manager in your site
           or application.</p>
 
           <h2>Installing Unity components from the Unity package registry</h2>

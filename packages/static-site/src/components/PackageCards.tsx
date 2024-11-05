@@ -1,4 +1,3 @@
-import { useResolvedPath } from "react-router-dom";
 import Card, { CardProps } from "./Card";
 
 interface PackageJson {
@@ -22,7 +21,7 @@ const PackageCards = () => {
       cards.push({
         title: p.name,
         description: p.description,
-        href: useResolvedPath(`../${p.name}/index.html`).pathname,
+        href: `./${p.name}/index.html`,
         linkLabel: "Launch",
       });
     }

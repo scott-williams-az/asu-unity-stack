@@ -1,8 +1,7 @@
 import {Link, useResolvedPath} from "react-router-dom";
-import { useRoutes } from "../hooks/useRoutes";
+import { PagePaths } from "~/routes/config2";
 
-export const HeaderGuide = () => {
-  const { DATALAYERGUIDE } = useRoutes();
+const HeaderGuide = () => {
   return (
     <div className="container my-6">
     <div className="row">
@@ -12,7 +11,7 @@ export const HeaderGuide = () => {
           <p>Testing data shows that users see asu.edu as one website. The ASU global header
             should appear on every subdomain and page of asu.edu to ensure and optimal
             user experience as they navigate across asu.edu.</p>
-
+            <a href={useResolvedPath("../@asu/component-header/index.html").pathname}>ssss</a>
           <h2>The ASU Header is delivered in five ways</h2>
 
           <h3>Components Header</h3>
@@ -89,11 +88,11 @@ export const HeaderGuide = () => {
             Cookie Consent component automatically bundled.</p>
 
           <p>If you need to install the Cookie Consent component yourself,
-            please see the section "Installing Unity components from
-            the Unity package registry."</p>
+            please see the section &quot;Installing Unity components from
+            the Unity package registry.&quot;</p>
 
           <h2>Google Tag Manager (GTM)</h2>
-          <p>See the <Link to={DATALAYERGUIDE}>Google Tag Manager (GTM) and Data
+          <p>See the <Link to={PagePaths.DATALAYERGUIDE}>Google Tag Manager (GTM) and Data
           Layer</Link> page for details on using Google Tag Manager in your site
           or application.</p>
 
@@ -111,3 +110,5 @@ export const HeaderGuide = () => {
     </div>
   );
 };
+
+export default HeaderGuide;

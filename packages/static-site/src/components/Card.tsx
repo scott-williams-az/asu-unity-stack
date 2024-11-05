@@ -26,7 +26,7 @@ const Card:FC<CardProps> = ({title, description, href,linkLabel, isRoute}) => {
         ) : (
         <a
           className="btn btn-maroon btn-medium"
-          target="_blank"
+          target="_blank" rel="noreferrer"
           href={href}
           >
           {linkLabel}

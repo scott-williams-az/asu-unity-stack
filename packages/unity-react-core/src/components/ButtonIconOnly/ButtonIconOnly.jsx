@@ -81,6 +81,7 @@ ButtonIconOnly.propTypes = {
     Button size
   */
   size: PropTypes.oneOf(["large", "small"]),
+  className: PropTypes.string,
 };
 
 ButtonIconOnly.defaultProps = {

@@ -65,8 +65,6 @@ const defaultStoryProps = {
   bgColor: gridLinksBgColor.NONE,
 };
 
-const defaultBgColor = gridLinksBgColor.NONE;
-
 const gridLinksTemplate = ({ bgColor, ...args }) => (
   <section className={gridLinksBgColorClassName[bgColor]}>
     <GridLinks {...(args as GridLinksProps)} />

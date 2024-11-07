@@ -1,9 +1,19 @@
 import React, { ReactElement } from "react";
+
+import { dataLayerRender } from "../../../../../shared/utils/datalayer-render";
 import {
   gridLinksNumColumns,
   gridLinksTextColor,
   gridLinksTextColorClassName,
 } from "./GridLinksConstants";
+
+const gaDefaultObject = {
+  name: "onclick",
+  event: "link",
+  action: "click",
+  type: "internal link",
+  region: "main content",
+};
 
 export interface GridLinksProps {
   /**
@@ -19,16 +29,22 @@ export interface GridLinksProps {
    */
   textColor?: gridLinksTextColor;
   /**
+   * Use external. True adds data-ga* attributes to HTML. False (default)
+   * enables internal React-based data layer handling.
+   */
+  useExternal?: boolean;
+  /**
    * The element where we will position the dialog beside.
    */
   children?: ReactElement | ReactElement[] | string;
 }
 
 export const GridLinks: React.FC<GridLinksProps> = ({
-  children,
+  gridLinkItems,
   numColumns,
   textColor,
-  gridLinkItems,
+  useExternal = false,
+  children,
 }) => {
   return (
     <>
@@ -40,9 +56,20 @@ export const GridLinks: React.FC<GridLinksProps> = ({
         ].join(" ")}
       >
         {gridLinkItems &&
-          gridLinkItems.map((item, index) => (
-            <a key={index} href={item.href}>
-              <span className={`fa fa-fw ${item.icon}`}></span>
+          gridLinkItems.map(item => (
+            <a
+              key={item.label + item.href}
+              href={item.href}
+              {...dataLayerRender(
+                {
+                  ...gaDefaultObject,
+                  text: item.label,
+                  section: `grid links ${item.label}`,
+                },
+                useExternal
+              )}
+            >
+              <span className={`fa fa-fw ${item.icon}`} />
               {item.label}
             </a>
           ))}

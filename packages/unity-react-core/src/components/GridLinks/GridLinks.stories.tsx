@@ -59,10 +59,12 @@ const gridLinkItems = [
 const defaultStoryProps = {
   numColumns: gridLinksNumColumns.TWO_COLUMNS,
   textColor: gridLinksTextColor.NONE,
-  gridLinkItems: gridLinkItems,
+  gridLinkItems,
   // children: "Content to be displayed",
   // bgColor is used story section wrapper, not in component.
   bgColor: gridLinksBgColor.NONE,
+  // Display the data-ga attributes on the links for Storybook HTML references.
+  useExternal: true,
 };
 
 const gridLinksTemplate = ({ bgColor, ...args }) => (

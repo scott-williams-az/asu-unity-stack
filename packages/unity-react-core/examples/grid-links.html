@@ -28,6 +28,7 @@
   <!-- *************************************************************** -->
   <!-- include bundled scripts from packages -->
   <script src="../dist/unityReactCore.umd.js"></script>
+
 </head>
 
 <body>
@@ -87,6 +88,9 @@
         numColumns: "three-columns",
         textColor: "text-gold",
         gridLinkItems: gridLinkItems,
+        // Optionally set useExternal true to display data-ga* attributes for
+        // non-React app data layer implementations.
+        useExternal: false,
         // children: "Optional children can go here",
       },
     });

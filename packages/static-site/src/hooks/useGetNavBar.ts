@@ -1,4 +1,4 @@
-import { NavTreeProps } from "@asu/component-header";
+import { NavTreeProps } from "@asu/component-header-footer";
 import { useLocation } from "react-router-dom";
 import { configRoutes } from "~/routes/config";
 import { getRelativePath } from "../utils/baseUrl";

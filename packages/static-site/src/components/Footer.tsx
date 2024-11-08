@@ -1,9 +1,7 @@
-import { ASUFooter, FooterProps } from "@asu/component-header-footer";
-
-const footerProps = {} as FooterProps
+import { ASUFooter } from "@asu/component-header-footer";
 
 export default function Footer() {
   return (
-    <ASUFooter {...footerProps} />
+    <ASUFooter />
   );
 }

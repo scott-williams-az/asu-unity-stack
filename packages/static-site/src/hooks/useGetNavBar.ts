@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import { configRoutes } from "~/routes/config";
 import { getRelativePath } from "../utils/baseUrl";
 
-function useGetNavBar() {
+function useGetNavBar(): NavTreeProps[] {
   const location = useLocation();
 
   const navTree:NavTreeProps[] = [];
@@ -18,7 +18,6 @@ function useGetNavBar() {
       type: data?.type,
     });
   })
-  console.log(navTree)
   return navTree;
 }
 

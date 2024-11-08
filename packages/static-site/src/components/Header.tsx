@@ -7,7 +7,7 @@ import useGetNavBar from "../hooks/useGetNavBar";
 function Navbar() {
   const navBar: NavTreeProps[] = useGetNavBar();
 
-  const headerProps = {
+  const headerProps: HeaderProps = {
     logo: {
       alt: "logo",
       src: desktopLogo,

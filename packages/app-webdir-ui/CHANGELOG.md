@@ -1,3 +1,10 @@
+# [@asu/app-webdir-ui-v3.6.4](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v3.6.3...@asu/app-webdir-ui-v3.6.4) (2024-11-12)
+
+
+### Bug Fixes
+
+* **app-webdir-ui:** remove lowercasing of emails ([52e993c](https://github.com/asu/asu-unity-stack/commit/52e993cdc23df1b97cd689c785af55dcfea2dd15))
+
 # [@asu/app-webdir-ui-v3.6.3](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v3.6.2...@asu/app-webdir-ui-v3.6.3) (2024-10-30)
 
 

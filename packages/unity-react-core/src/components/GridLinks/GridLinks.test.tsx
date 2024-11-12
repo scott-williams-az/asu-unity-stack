@@ -3,10 +3,7 @@ import React from "react";
 import { expect, describe, it, afterEach, beforeEach } from "vitest";
 
 import { GridLinks, GridLinksProps } from "./GridLinks";
-import {
-  gridLinksNumColumns,
-  gridLinksTextColor,
-} from "./GridLinksConstants";
+import { gridLinksNumColumns, gridLinksTextColor } from "./GridLinksConstants";
 
 const gridLinkItems = [
   {
@@ -33,8 +30,9 @@ const gridLinkItems = [
 const defaultProps = {
   numColumns: gridLinksNumColumns.TWO_COLUMNS,
   textColor: gridLinksTextColor.NONE,
-  gridLinkItems: gridLinkItems,
+  gridLinkItems,
   // children: "Content to be displayed",
+  useExternal: false,
 };
 
 const renderComponent = (props: GridLinksProps) => {

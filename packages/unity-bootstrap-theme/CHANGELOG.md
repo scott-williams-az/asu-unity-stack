@@ -1,3 +1,11 @@
+# [@asu/unity-bootstrap-theme-v1.15.3](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.15.2...@asu/unity-bootstrap-theme-v1.15.3) (2024-11-13)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** rename innovation logo and reduce duplicate ([638d861](https://github.com/ASU/asu-unity-stack/commit/638d8617ea4d00a9412f3509cda1386de0d6807f))
+* **unity-bootstrap-theme:** updated footer ranking logo ([e340bb8](https://github.com/ASU/asu-unity-stack/commit/e340bb886571440aab9bee93507723dc3ca3d9a2))
+
 # [@asu/unity-bootstrap-theme-v1.15.2](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.15.1...@asu/unity-bootstrap-theme-v1.15.2) (2024-10-30)
 
 

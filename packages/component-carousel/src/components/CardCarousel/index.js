@@ -2,6 +2,7 @@
 import { Card } from "@asu/components-core";
 import PropTypes from "prop-types";
 import React from "react";
+import { useEffect, useState } from "react";
 
 import { BaseCarousel } from "../../core/components/BaseCarousel";
 
@@ -77,20 +78,47 @@ const CardCarousel = ({
   maxWidth = undefined,
   imageAutoSize = true,
 }) => {
+  const [currentPerView, setCurrentPerView] = useState(perView);
+
+  useEffect(() => {
+    const updatePerView = () => {
+      const screenWidth = window.innerWidth;
+      let perViewValue;
+      switch (perView) {
+        case "3":
+          perViewValue = screenWidth > 1024 ? 3 : screenWidth > 768 ? 2 : 1;
+          break;
+        case "2":
+          perViewValue = screenWidth < 768 ? 1 : 2;
+          break;
+        case "1":
+        default:
+          perViewValue = 1;
+          break;
+      }
+      setCurrentPerView(perViewValue);
+    };
+
+    updatePerView();
+    window.addEventListener("resize", updatePerView);
+
+    return () => window.removeEventListener("resize", updatePerView);
+  }, [perView]);
+
   const carouselItems = cardItems.map(item =>
     htmlTemplate(item, cardType, cardHorizontal, cardEventFormat)
   );
-  const activateGlideActions = cardItems.length > perView;
+  const activateGlideActions = cardItems.length > currentPerView;
 
   return (
     <BaseCarousel
-      perView={+perView}
+      perView={+currentPerView}
       maxWidth={maxWidth}
       width={width}
       carouselItems={carouselItems}
       cssClass="aligned-carousel"
       imageAutoSize={imageAutoSize}
-      removeSideBackground={cardItems.length <= perView}
+      removeSideBackground={cardItems.length <= currentPerView}
       hasPositionIndicators={activateGlideActions}
       hasNavButtons={activateGlideActions}
       isDraggable={activateGlideActions}

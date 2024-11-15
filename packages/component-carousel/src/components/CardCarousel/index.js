@@ -80,22 +80,25 @@ const CardCarousel = ({
 }) => {
   const [currentPerView, setCurrentPerView] = useState(perView);
 
+  const BREAKPOINT_LARGE = 1024;
+  const BREAKPOINT_MEDIUM = 768;
+
   useEffect(() => {
     const updatePerView = () => {
       const screenWidth = window.innerWidth;
       let perViewValue;
       switch (perView) {
         case "3":
-          if (screenWidth > 1024) {
+          if (screenWidth > BREAKPOINT_LARGE) {
             perViewValue = 3;
-          } else if (screenWidth > 768) {
+          } else if (screenWidth > BREAKPOINT_MEDIUM) {
             perViewValue = 2;
           } else {
             perViewValue = 1;
           }
           break;
         case "2":
-          perViewValue = screenWidth < 768 ? 1 : 2;
+          perViewValue = screenWidth < BREAKPOINT_MEDIUM ? 1 : 2;
           break;
         default:
           perViewValue = 1;

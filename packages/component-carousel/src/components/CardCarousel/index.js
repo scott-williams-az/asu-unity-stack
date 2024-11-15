@@ -97,7 +97,6 @@ const CardCarousel = ({
         case "2":
           perViewValue = screenWidth < 768 ? 1 : 2;
           break;
-        case "1":
         default:
           perViewValue = 1;
           break;

@@ -86,7 +86,13 @@ const CardCarousel = ({
       let perViewValue;
       switch (perView) {
         case "3":
-          perViewValue = screenWidth > 1024 ? 3 : screenWidth > 768 ? 2 : 1;
+          if (screenWidth > 1024) {
+            perViewValue = 3;
+          } else if (screenWidth > 768) {
+            perViewValue = 2;
+          } else {
+            perViewValue = 1;
+          }
           break;
         case "2":
           perViewValue = screenWidth < 768 ? 1 : 2;

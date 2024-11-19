@@ -102,7 +102,7 @@ This repository contains multiple packages which are managed and published using
 
 ## Cookie Consent
 
-The CSS for the cookie consent banner can be found in [unity-bootstrap-theme](./packages/unity-bootstrap-theme/src/css/cookie-consent.css). The JavaScript for the cookie consent banner can be found in [component-cookie-consent](./packages/unity-bootstrap-theme/src/js/cookie-consent.js). The Javascript can be placed in a script tag or included in a bundle. The CSS can be included in a bundle or included in a style tag.
+The CSS for the cookie consent banner can be found in [unity-bootstrap-theme](./packages/unity-bootstrap-theme/src/css/cookie-consent.css). The JavaScript for the cookie consent banner can be found in [unity-bootstrap-theme as well in the JS location](./packages/unity-bootstrap-theme/src/js/cookie-consent.js). The Javascript can be placed in a script tag or included in a bundle. The CSS can be included in a bundle or included in a style tag.
 
 ## Deprecated packages
 

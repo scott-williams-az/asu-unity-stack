@@ -8,12 +8,13 @@
     flex-direction: column;
     align-items: center;
     max-width: 1200px;
+    border: 2px solid #D0D0D0 !important;
   }
 
   .cassie-cookie-module .cassie-bottom {
     margin: 0 auto;
     padding: 1rem 2rem;
-    background-color: #D0D0D0;
+    background-color: #E8E8E8;
   }
 
   button.cassie-pre-banner--button.cassie-view-all {
@@ -186,12 +187,16 @@
     font-family: Arial, Helvetica, "Nimbus Sans L", "Liberation Sans", FreeSans, sans-serif !important;
   }
 
-  .cassie-cookie-module button:hover,
-  .cassie-cookie-module button:focus {
-    transform: scale(1.025) !important;
+  .cassie-cookie-module button:hover {
+    transform: scale(1.05) !important;
     opacity: 1 !important;
     cursor: pointer;
     outline: 0px !important;
+  }
+  .cassie-cookie-module button:focus,
+  .cassie-cookie-module *[role="button"]:focus{
+    box-shadow: 0 0 0 2px #fff,0 0 0 4px #191919!important;
+    outline: none !important;
   }
 
   .cassie-strictly-necessary--description.cassie-cookie-group--description {

@@ -183,7 +183,7 @@
     white-space: nowrap;
     padding: 0.65rem 1rem !important;
     width: fit-content !important;
-    font-family: Arial, Helvetica, "Nimbus Sans L", "Liberation Sans", FreeSans, sans-serif;
+    font-family: Arial, Helvetica, "Nimbus Sans L", "Liberation Sans", FreeSans, sans-serif !important;
   }
 
   .cassie-cookie-module button:hover,

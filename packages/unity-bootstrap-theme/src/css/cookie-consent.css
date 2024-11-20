@@ -220,6 +220,10 @@
     right: -20px;
   }
 
+  .cassie-cookie-module>.cassie-pre-banner {
+    border-radius: 0 !important;
+  }
+
 
   /* Mobile and other devices */
   /* Tablets */

@@ -1,0 +1,288 @@
+/**
+* TODO: Should we compile this css and include it in our css bundle or just import it and add it into a script in webspark?
+*/
+/**
+  * pre-banner styles
+  */
+  .cassie-pre-banner {
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    border: 2px solid #D0D0D0 !important;
+  }
+
+  .cassie-cookie-module .cassie-bottom {
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    background-color: #E8E8E8;
+  }
+
+  button.cassie-pre-banner--button.cassie-view-all {
+    background-color: black !important;
+  }
+
+  button.cassie-pre-banner--button.cassie-view-all svg {
+    display: none;
+  }
+
+  .cassie-bottom .cassie-pre-banner--text {
+    width: 100% !important;
+    justify-content: center;
+    font-size: 1rem;
+  }
+
+  @media only screen and (max-width: 992px) {
+    .cassie-pre-banner--button--container {
+      flex-direction: row !important;
+    }
+    .cassie-cookie-module > .cassie-pre-banner {
+      align-self: flex-end !important;
+    }
+  }
+
+  .cassie-pre-banner--button--container {
+    justify-content: flex-start !important;
+    width: 100% !important;
+    gap: 1.5rem;
+  }
+
+
+  /* Don't allow drilldown into cookie script descriptions or show them */
+
+  [id^="cassie_expand_cookies_icon"] {
+    fill: var(--expand-cookies-icon-color);
+    fill: var(--banner-submit-preferences-button-color);
+    padding-left: 0px;
+  }
+
+  .cassie-cookie-modal--group .cassie-cookie-children--container {
+    display: none;
+  }
+
+  div.cassie-cookie-modal.cassie-cookie-modal--center {
+    background-color: #FFFFFF;
+    color: #191919
+  }
+
+
+  .cassie-cookie-modal.cassie-cookie-modal--center>*:nth-child(1) {
+    border-bottom: 1px solid #D0D0D0 !important;
+  }
+
+
+  /* Change borders and spacing around buttons */
+
+  .cassie-cookie-modal .cassie-cookie-modal--main {
+    border: 0px solid var(--banner-secondary-color);
+  }
+
+  .cassie-cookie-module>.cassie-cookie-modal {
+    border-right: unset;
+  }
+
+  .cassie-cookie-modal--top-header {
+    display: none !important;
+  }
+
+  .cassie-cookie-modal--footer .cassie-cookie-modal--footer-extra {
+    padding-top: 30px;
+  }
+
+  .cassie-cookie-module p a {
+    color: #8C1D40;
+    text-decoration: underline;
+  }
+
+  .cassie-cookie-modal--footer>p {
+    font-size: .75rem !important
+  }
+
+  .cassie-cookie-modal--group,
+  .cassie-cookie-modal--select-group {
+    border-bottom: 1px solid #D0D0D0 !important;
+  }
+
+  .cassie-cookie-modal--group-head-container .cassie-cookie-group--description {
+    width: 100%;
+  }
+
+  /*Text font and remove unwanted items */
+  .cassie-cookie-modal--header .cassie-cookie-modal--header--content {
+    border: 0px;
+    color: #0f0f0f;
+    word-spacing: normal;
+    word-break: break-word;
+    font-size: 1.25rem;
+    font-weight: 700;
+    font-family: Arial, Helvetica, "Nimbus Sans L", "Liberation Sans", FreeSans, sans-serif;
+  }
+
+  .cassie-cookie-module,
+  .cassie-cookie-module button
+  {
+    font-family: Arial, Helvetica, "Nimbus Sans L", "Liberation Sans", FreeSans, sans-serif !important;
+  }
+
+  .cassie-expand-cookies--container .cassie-cookie-group--heading {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .cassie-cookie-modal--footer-image--container {
+    display: none !important;
+  }
+
+  .cassie-cookie-modal--header .cassie-cookie-modal--accept-all {
+    display: none;
+  }
+
+  .cassie-cookie-modal--save-preferences--container .cassie-cookie-modal--save-preferences {
+    width: 10rem;
+    margin: 0px 15px 0px 15px;
+  }
+
+  .cassie-cookie-modal--group-head-container .cassie-cookie-group--description {
+    display: flex;
+  }
+
+  .cassie-cookie-modal .cassie-cookie-modal--footer {
+    margin-top: unset;
+  }
+
+  .cassie-cookie-module>.cassie-cookie-modal--center {
+    height: auto;
+    width: 30%;
+    margin: auto;
+  }
+
+  .cassie-cookie-modal--group-head-container .cassie-cookie-group--description {
+    display: none;
+  }
+
+  .cassie-cookie-modal--group-head-container .cassie-expandable-description--show {
+    display: flex;
+    font-size: .75rem;
+  }
+
+  .cassie-strictly-necessary--description.cassie-cookie-group--description.cassie-expand-cookies--icon--open {
+    display: block;
+    font-size: .75rem;
+  }
+
+  .cassie-expand-cookies--container span>svg.cassie-expand-cookies--icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .cassie-cookie-module button {
+    border-radius: 400rem !important;
+    border: none !important;
+    background-color: #8c1d40 !important;
+    color: #ffffff !important;
+    font-size: .875rem !important;
+    font-weight: 700 !important;
+    white-space: nowrap;
+    padding: 0.65rem 1rem !important;
+    width: fit-content !important;
+    font-family: Arial, Helvetica, "Nimbus Sans L", "Liberation Sans", FreeSans, sans-serif !important;
+  }
+
+  .cassie-cookie-module button:hover {
+    transform: scale(1.05) !important;
+    opacity: 1 !important;
+    cursor: pointer;
+    outline: 0px !important;
+  }
+  .cassie-cookie-module button:focus,
+  .cassie-cookie-module *[role="button"]:focus,
+  .cassie-cookie-module a:focus,
+  .cassie-cookie-module *[role="switch"]:focus {
+    box-shadow: 0 0 0 2px #fff,0 0 0 4px #191919 !important;
+    outline: none !important;
+  }
+
+  .cassie-pre-banner .cassie-view-all {
+    margin-top: 10px !important;
+  }
+
+  .cassie-strictly-necessary--description.cassie-cookie-group--description {
+    display: none;
+  }
+
+  .cassie-cookie-modal--center .cassie-toggle-switch--slider {
+    left: -35px;
+    right: 40px;
+    background-color: #D0D0D0;
+  }
+
+  .cassie-cookie-modal--center .cassie-toggle-switch--slider--active {
+    background-color: #78BE20;
+    ;
+  }
+
+  .cassie-cookie-modal--center .cassie-toggle-switch--status {
+    right: -20px;
+  }
+
+  .cassie-cookie-module>.cassie-pre-banner {
+    border-radius: 0 !important;
+  }
+
+
+  /* Mobile and other devices */
+  /* Tablets */
+  @media only screen and (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+    .cassie-cookie-module>.cassie-cookie-modal--center {
+      height: -webkit-fill-available;
+      width: 50%;
+      margin-top: 1%;
+      margin-bottom: 1%;
+
+    }
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+    .cassie-cookie-module>.cassie-cookie-modal--center {
+      height: auto;
+    }
+  }
+
+  /* Phones */
+  @media only screen and (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+    .cassie-cookie-module>.cassie-cookie-modal--center {
+      height: -webkit-fill-available;
+      width: 50%;
+      margin-top: 1%;
+      margin-bottom: 1%;
+    }
+  }
+
+  @media only screen and (min-width: 320px)and (orientation: portrait) {
+
+    .cassie-cookie-modal .cassie-cookie-modal--footer {
+      margin-top: inherit;
+    }
+
+
+    .cassie-cookie-modal--footer-extra .cassie-cookie-modal--save-preferences--container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .cassie-cookie-modal--save-preferences--container .cassie-cookie-modal--save-preferences {
+      width: 90%;
+    }
+
+    .cassie-cookie-modal--group-head-container .cassie-expand-cookies--container {
+      width: 77%;
+    }
+
+
+    .cassie-cookie-module>.cassie-cookie-modal--center {
+      height: -webkit-fill-available;
+      margin: 5% 5% 5% 5%;
+      width: 80%;
+    }
+
+  }

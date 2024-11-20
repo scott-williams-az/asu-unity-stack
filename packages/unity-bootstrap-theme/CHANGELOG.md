@@ -1,3 +1,10 @@
+# [@asu/unity-bootstrap-theme-v1.15.4](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.15.3...@asu/unity-bootstrap-theme-v1.15.4) (2024-11-20)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** fix rounded corners on mobile modals ([b53ed79](https://github.com/ASU/asu-unity-stack/commit/b53ed790737e87c01ae31fd1baad88ad1edb030c))
+
 # [@asu/unity-bootstrap-theme-v1.15.3](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.15.2...@asu/unity-bootstrap-theme-v1.15.3) (2024-11-13)
 
 

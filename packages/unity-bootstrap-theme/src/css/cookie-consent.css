@@ -35,6 +35,9 @@
     .cassie-pre-banner--button--container {
       flex-direction: row !important;
     }
+    .cassie-cookie-module > .cassie-pre-banner {
+      align-self: flex-end !important;
+    }
   }
 
   .cassie-pre-banner--button--container {
@@ -91,12 +94,16 @@
   }
 
   .cassie-cookie-modal--footer>p {
-    font-size: 14px;
+    font-size: .75rem !important
   }
 
   .cassie-cookie-modal--group,
   .cassie-cookie-modal--select-group {
     border-bottom: 1px solid #D0D0D0 !important;
+  }
+
+  .cassie-cookie-modal--group-head-container .cassie-cookie-group--description {
+    width: 100%;
   }
 
   /*Text font and remove unwanted items */
@@ -128,13 +135,6 @@
   .cassie-cookie-modal--header .cassie-cookie-modal--accept-all {
     display: none;
   }
-
-  /* body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, .header3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
-      margin: 0;
-      padding: 0;
-      font-size: 14px;
-    } */
-
 
   .cassie-cookie-modal--save-preferences--container .cassie-cookie-modal--save-preferences {
     width: 10rem;
@@ -195,10 +195,14 @@
   }
   .cassie-cookie-module button:focus,
   .cassie-cookie-module *[role="button"]:focus,
-  .cassie-cookie-module a:focus
-  {
-    box-shadow: 0 0 0 2px #fff,0 0 0 4px #191919!important;
+  .cassie-cookie-module a:focus,
+  .cassie-cookie-module *[role="switch"]:focus {
+    box-shadow: 0 0 0 2px #fff,0 0 0 4px #191919 !important;
     outline: none !important;
+  }
+
+  .cassie-pre-banner .cassie-view-all {
+    margin-top: 10px !important;
   }
 
   .cassie-strictly-necessary--description.cassie-cookie-group--description {
@@ -259,14 +263,6 @@
       margin-top: inherit;
     }
 
-    [id^="cassie_expand_cookies_icon"] {
-      fill: var(--expand-cookies-icon-color);
-      fill: var(--banner-submit-preferences-button-color);
-      opacity: 100;
-      padding-left: 10px;
-      pointer-events: auto;
-    }
-
 
     .cassie-cookie-modal--footer-extra .cassie-cookie-modal--save-preferences--container {
       display: flex;
@@ -286,7 +282,7 @@
     .cassie-cookie-module>.cassie-cookie-modal--center {
       height: -webkit-fill-available;
       margin: 5% 5% 5% 5%;
-      width: unset;
+      width: 80%;
     }
 
   }

@@ -1,3 +1,10 @@
+# [@asu/component-carousel-v2.2.0](https://github.com/asu/asu-unity-stack/compare/@asu/component-carousel-v2.1.1...@asu/component-carousel-v2.2.0) (2024-11-21)
+
+
+### Features
+
+* **component-carousel:** added aria-disabled for disabled buttons ([2d5ad7a](https://github.com/asu/asu-unity-stack/commit/2d5ad7a3d00a2e321474ce61a64abcafc4a4fd55))
+
 # [@asu/component-carousel-v2.1.1](https://github.com/asu/asu-unity-stack/compare/@asu/component-carousel-v2.1.0...@asu/component-carousel-v2.1.1) (2024-11-05)
 
 

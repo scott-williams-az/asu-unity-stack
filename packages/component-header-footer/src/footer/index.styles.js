@@ -139,7 +139,7 @@ const StyledFooter = styled.footer`
       }
 
       .nav-link {
-        padding: 1rem 0.5rem;
+        padding: .75rem 1rem .5rem 1rem;
         font-size: 2rem;
         color: var(--color-base-grey-4);
         line-height: 1;
@@ -253,6 +253,7 @@ const StyledFooter = styled.footer`
       .accordion-body {
         display: none;
         overflow: hidden;
+        padding: 0 0 0 1.5rem;
 
         &.collapsing {
           display: block;

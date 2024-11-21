@@ -16,6 +16,7 @@ import {
   initImageCarousel,
   initImageGalleryCarousel,
 } from "../../components/ComponentCarousel/ComponentCarousel";
+import { GridLinks } from "../../components/GridLinks/GridLinks.tsx";
 import { Hero } from "../../components/Hero/Hero";
 import { Image } from "../../components/Image/Image";
 import { Pagination } from "../../components/Pagination/Pagination";
@@ -82,6 +83,12 @@ export const initButtonTag = ({ targetSelector, props }) =>
  */
 export const initCard = ({ targetSelector, props }) =>
   RenderReact(Card, props, document.querySelector(targetSelector));
+
+/**
+ * @param {ComponentProps} props
+ */
+export const initGridLinks = ({ targetSelector, props }) =>
+  RenderReact(GridLinks, props, document.querySelector(targetSelector));
 
 /**
  * @param {ComponentProps} props

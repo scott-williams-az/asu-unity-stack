@@ -1,4 +1,5 @@
 // @ts-check
+import { dataLayerRender } from "@shared/utils/datalayer-render";
 import PropTypes from "prop-types";
 import React from "react";
 
@@ -28,13 +29,9 @@ export const ButtonIconOnly = ({
   size,
   cardTitle,
   className,
+  useExternal,
   ...rest
 }) => {
-  const handleClick = text => {
-    trackGAEvent({ ...gaDefaultObject, text, section: cardTitle });
-    onClick?.();
-  };
-
   return (
     <button
       type="button"
@@ -42,8 +39,18 @@ export const ButtonIconOnly = ({
         size === "large" && "btn-circle-large"
       } ${className}`}
       ref={innerRef}
-      onClick={() => handleClick(`${icon?.[1]} icon`)}
       aria-label="Close"
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      {...dataLayerRender(
+        {
+          ...gaDefaultObject,
+          text: `${icon?.[1]} icon`,
+          section: cardTitle,
+        },
+        useExternal,
+        onClick
+      )}
+      // eslint-disable-next-line react/jsx-props-no-spreading
       {...rest}
     >
       <i className={`${icon?.[0]} fa-${icon?.[1]}`} />
@@ -82,6 +89,7 @@ ButtonIconOnly.propTypes = {
   */
   size: PropTypes.oneOf(["large", "small"]),
   className: PropTypes.string,
+  useExternal: PropTypes.bool,
 };
 
 ButtonIconOnly.defaultProps = {

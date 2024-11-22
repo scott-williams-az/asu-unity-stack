@@ -27,6 +27,7 @@
  * @property {"large"|"small"} [size]
  * @property {string}   [cardTitle]
  * @property {string}   [className]
+ * @property {boolean} useExternal
  */
 
 /**

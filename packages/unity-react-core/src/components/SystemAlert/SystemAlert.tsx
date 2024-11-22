@@ -1,5 +1,6 @@
-import React, { ReactElement, useState } from "react";
 import classnames from "classnames";
+import React, { ReactElement, useState } from "react";
+
 import { ButtonIconOnly } from "../ButtonIconOnly/ButtonIconOnly";
 
 export enum SystemAlertType {
@@ -12,57 +13,89 @@ export interface SystemAlertProps {
   /**
    * Tyoe of systen akert
    */
-  type: SystemAlertType,
+  type: SystemAlertType;
   /**
    * Content of the alert
    */
-  children: ReactElement | ReactElement[] | string,
+  children: ReactElement | ReactElement[] | string;
   /**
    * If the alert can be dismissed
    */
-  dismissable: boolean,
+  dismissable: boolean;
+  /**
+   * Use external. True adds data-ga* attributes to HTML. False (default)
+   * enables internal React-based data layer handling.
+   */
+  useExternal: boolean;
 }
 
 export const SystemAlert: React.FC<SystemAlertProps> = ({
   type,
   dismissable,
   children,
+  useExternal,
 }) => {
   const [isVisible, setIsVisible] = useState(true);
-  const handleClose = ()=>setIsVisible(false);
+  const handleClose = () => setIsVisible(false);
 
   const map = {
-    [`${SystemAlertType.WARNING}`]: { iconTitle: "Warning", iconName: "bell", alertClass: "warning" },
-    [`${SystemAlertType.INFO}`]: { iconTitle: "Information", iconName: "info-circle", alertClass: "info" },
-    [`${SystemAlertType.SUCCESS}`]: { iconTitle: "Success", iconName: "check-circle", alertClass: "success" },
-    [`${SystemAlertType.ERROR}`]: { iconTitle: "Error", iconName: "exclamation-triangle", alertClass: "danger" },
+    [`${SystemAlertType.WARNING}`]: {
+      iconTitle: "Warning",
+      iconName: "bell",
+      alertClass: "warning",
+    },
+    [`${SystemAlertType.INFO}`]: {
+      iconTitle: "Information",
+      iconName: "info-circle",
+      alertClass: "info",
+    },
+    [`${SystemAlertType.SUCCESS}`]: {
+      iconTitle: "Success",
+      iconName: "check-circle",
+      alertClass: "success",
+    },
+    [`${SystemAlertType.ERROR}`]: {
+      iconTitle: "Error",
+      iconName: "exclamation-triangle",
+      alertClass: "danger",
+    },
   };
 
-  const environmentAction = {
-    // "data-bs-dismiss": "alert", // used with BS5 and HTML
-    onClick: handleClose, // Used with react
-  }
+  const environmentAction = useExternal
+    ? {
+        "data-bs-dismiss": "alert", // used with BS5 and HTML
+      }
+    : {
+        onClick: handleClose, // Used with react
+      };
 
-  return (isVisible && <div
+  return (
+    isVisible && (
+      <div
         className={classnames("alert", {
           "alert-dismissable": dismissable,
           [`alert-${map[type]?.alertClass}`]: type,
         })}
         role="alert"
-        >
+      >
         <div className="alert-icon">
-          <span title={map[type]?.iconTitle} className={`fa fa-icon fa-${map[type]?.iconName}`}></span>
+          <span
+            title={map[type]?.iconTitle}
+            className={`fa fa-icon fa-${map[type]?.iconName}`}
+          />
         </div>
-        <div className="alert-content">
-          {children}
-        </div>
+        <div className="alert-content">{children}</div>
         {dismissable && (
           <div className="alert-close">
             {/* TODO: needs to works with data-bs-dismiss="alert"  */}
-            <ButtonIconOnly icon={["fas", "times"]} {...environmentAction} />
+            <ButtonIconOnly
+              icon={["fas", "times"]}
+              {...environmentAction}
+              useExternal={useExternal}
+            />
           </div>
         )}
       </div>
+    )
   );
 };
-

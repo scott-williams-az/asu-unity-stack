@@ -11,7 +11,7 @@ export enum SystemAlertType {
 }
 export interface SystemAlertProps {
   /**
-   * Tyoe of systen akert
+   * Type of system alert
    */
   type: SystemAlertType;
   /**

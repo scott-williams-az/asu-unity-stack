@@ -26,7 +26,7 @@ export interface SystemAlertProps {
    * Use external. True adds data-ga* attributes to HTML. False (default)
    * enables internal React-based data layer handling.
    */
-  useExternal: boolean;
+  useExternal?: boolean;
 }
 
 export const SystemAlert: React.FC<SystemAlertProps> = ({

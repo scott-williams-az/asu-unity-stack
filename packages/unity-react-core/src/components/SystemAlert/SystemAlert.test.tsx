@@ -1,6 +1,6 @@
 import { render, cleanup, fireEvent } from "@testing-library/react";
 import React from "react";
-import { expect, describe, it, afterEach, beforeEach, vi } from 'vitest';
+import { expect, describe, it, afterEach } from "vitest";
 
 import { SystemAlert, SystemAlertType } from "./SystemAlert";
 

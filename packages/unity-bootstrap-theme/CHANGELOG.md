@@ -1,3 +1,10 @@
+# [@asu/unity-bootstrap-theme-v1.16.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.15.4...@asu/unity-bootstrap-theme-v1.16.0) (2024-11-28)
+
+
+### Features
+
+* **unity-bootstrap-theme:** add ranking image css ([a391a3e](https://github.com/ASU/asu-unity-stack/commit/a391a3e727b50963dcd3b3c64ebccc221e463c95))
+
 # [@asu/unity-bootstrap-theme-v1.15.4](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.15.3...@asu/unity-bootstrap-theme-v1.15.4) (2024-11-20)
 
 

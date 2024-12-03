@@ -14,6 +14,8 @@ export * from "./RankingCard/RankingCard";
 export * from "./SystemAlert/SystemAlert.tsx";
 export * from "./TabbedPanels/TabbedPanels";
 export * from "./Testimonial/Testimonial";
+export * from "./Tooltip/Tooltip.tsx";
 export * from "./Video/Video";
 export * from "./ComponentCarousel/components";
+export * from "./List/List.tsx";
 export * from "./GridLinks/GridLinks.tsx";

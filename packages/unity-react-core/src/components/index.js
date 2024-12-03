@@ -6,6 +6,7 @@ export * from "./Button/Button";
 export * from "./ButtonIconOnly/ButtonIconOnly";
 export * from "./ButtonTag/ButtonTag";
 export * from "./Card/Card";
+export * from "./Divider/Divider.tsx";
 export * from "./FeedAnatomy";
 export * from "./Hero/Hero";
 export * from "./Image/Image";

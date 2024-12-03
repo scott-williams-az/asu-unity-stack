@@ -12,6 +12,7 @@ export * from "./Hero/Hero";
 export * from "./Image/Image";
 export * from "./Pagination/Pagination";
 export * from "./RankingCard/RankingCard";
+export * from "./SystemAlert/SystemAlert.tsx";
 export * from "./TabbedPanels/TabbedPanels";
 export * from "./Testimonial/Testimonial";
 export * from "./Tooltip/Tooltip.tsx";

@@ -18,6 +18,7 @@ export default {
 const defaultProps = {
   title: "Header",
   content: "Content",
+  useExternal: true,
 }
 
 const tooltipTemplate = args => <Tooltip {...args} />;
@@ -26,7 +27,7 @@ export const Icon = {
   render: tooltipTemplate.bind({}),
   args: {
     ...defaultProps,
-    triggerElement: <ButtonIconOnly icon={["fas","info"]} />,
+    triggerElement: <ButtonIconOnly useExternal={defaultProps.useExternal} icon={["fas","info"]} />,
   }
 };
 

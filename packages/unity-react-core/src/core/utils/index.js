@@ -23,6 +23,7 @@ import { List } from "../../components/List/List.tsx";
 import { Image } from "../../components/Image/Image";
 import { Pagination } from "../../components/Pagination/Pagination";
 import { RankingCard } from "../../components/RankingCard/RankingCard";
+import { SystemAlert } from "../../components/SystemAlert/SystemAlert.tsx";
 import { TabbedPanels } from "../../components/TabbedPanels/TabbedPanels";
 import { Testimonial } from "../../components/Testimonial/Testimonial";
 import { Video } from "../../components/Video/Video";
@@ -134,8 +135,14 @@ export const initTabbedPanels = ({ targetSelector, props }) =>
   RenderReact(TabbedPanels, props, document.querySelector(targetSelector));
 
 /**
-  * @param {ComponentProps} props
-  */
+ * @param {ComponentProps} props
+ */
+export const initSystemAlert = ({ targetSelector, props }) =>
+  RenderReact(SystemAlert, props, document.querySelector(targetSelector));
+
+/**
+ * @param {ComponentProps} props
+ */
 export const initDivider = ({ targetSelector, props }) =>
   RenderReact(Divider, props, document.querySelector(targetSelector));
 

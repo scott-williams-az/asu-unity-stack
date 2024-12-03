@@ -60,6 +60,7 @@ export const GridLinks: React.FC<GridLinksProps> = ({
             <a
               key={item.label + item.href}
               href={item.href}
+              // eslint-disable-next-line react/jsx-props-no-spreading
               {...dataLayerRender(
                 {
                   ...gaDefaultObject,

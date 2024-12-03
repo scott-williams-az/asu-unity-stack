@@ -13,6 +13,7 @@ export * from "./Pagination/Pagination";
 export * from "./RankingCard/RankingCard";
 export * from "./TabbedPanels/TabbedPanels";
 export * from "./Testimonial/Testimonial";
+export * from "./Tooltip/Tooltip.tsx";
 export * from "./Video/Video";
 export * from "./ComponentCarousel/components";
 export * from "./List/List.tsx";

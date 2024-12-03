@@ -138,6 +138,10 @@ export {
   initImageCarousel,
   initImageGalleryCarousel,
 };
+import { Tooltip } from "../../components/Tooltip/Tooltip.tsx";
+
+export const initTooltip = ({ targetSelector, props }) =>
+  RenderReact(Tooltip, props, document.querySelector(targetSelector));
 
 /**
  * @param {ComponentProps} props

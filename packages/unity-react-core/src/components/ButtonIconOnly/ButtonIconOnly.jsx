@@ -3,8 +3,6 @@ import { dataLayerRender } from "@shared/utils/datalayer-render";
 import PropTypes from "prop-types";
 import React from "react";
 
-import { trackGAEvent } from "../../../../../shared";
-
 const gaDefaultObject = {
   name: "onclick",
   event: "link",
@@ -46,7 +44,7 @@ export const ButtonIconOnly = ({
           text: `${icon?.[1]} icon`,
           section: cardTitle,
         },
-        false, //useExternal,
+        false, // useExternal,
         onClick
       )}
       // eslint-disable-next-line react/jsx-props-no-spreading

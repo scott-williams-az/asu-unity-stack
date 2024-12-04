@@ -139,7 +139,7 @@ const StyledFooter = styled.footer`
       }
 
       .nav-link {
-        padding: .75rem 1rem .5rem 1rem;
+        padding: 0.75rem 1rem 0.5rem 1rem;
         font-size: 2rem;
         color: var(--color-base-grey-4);
         line-height: 1;

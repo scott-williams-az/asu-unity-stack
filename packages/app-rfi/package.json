@@ -42,7 +42,7 @@
     "url": "https://github.com/ASU/asu-unity-stack/issues"
   },
   "devDependencies": {
-    "@asu/unity-bootstrap-theme": "workspace:^",
+    "@asu/unity-bootstrap-theme": "^1.0.0",
     "@babel/core": "^7.13.14",
     "@babel/eslint-parser": "^7.13.14",
     "@babel/plugin-proposal-class-properties": "^7.13.0",
@@ -79,7 +79,7 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
-    "@asu/components-core": "workspace:^",
+    "@asu/components-core": "^3.0.0",
     "formik": "^2.1.4",
     "prop-types": "^15.7.2",
     "react-phone-input-2": "^2.14.0",

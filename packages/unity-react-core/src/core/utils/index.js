@@ -16,10 +16,14 @@ import {
   initImageCarousel,
   initImageGalleryCarousel,
 } from "../../components/ComponentCarousel/ComponentCarousel";
+import { Divider } from "../../components/Divider/Divider.tsx";
+import { GridLinks } from "../../components/GridLinks/GridLinks.tsx";
 import { Hero } from "../../components/Hero/Hero";
+import { List } from "../../components/List/List.tsx";
 import { Image } from "../../components/Image/Image";
 import { Pagination } from "../../components/Pagination/Pagination";
 import { RankingCard } from "../../components/RankingCard/RankingCard";
+import { SystemAlert } from "../../components/SystemAlert/SystemAlert.tsx";
 import { TabbedPanels } from "../../components/TabbedPanels/TabbedPanels";
 import { Testimonial } from "../../components/Testimonial/Testimonial";
 import { Video } from "../../components/Video/Video";
@@ -85,6 +89,12 @@ export const initCard = ({ targetSelector, props }) =>
 /**
  * @param {ComponentProps} props
  */
+export const initGridLinks = ({ targetSelector, props }) =>
+  RenderReact(GridLinks, props, document.querySelector(targetSelector));
+
+/**
+ * @param {ComponentProps} props
+ */
 export const initHero = ({ targetSelector, props }) =>
   RenderReact(Hero, props, document.querySelector(targetSelector));
 
@@ -124,9 +134,32 @@ export const initVideo = ({ targetSelector, props }) =>
 export const initTabbedPanels = ({ targetSelector, props }) =>
   RenderReact(TabbedPanels, props, document.querySelector(targetSelector));
 
+/**
+ * @param {ComponentProps} props
+ */
+export const initSystemAlert = ({ targetSelector, props }) =>
+  RenderReact(SystemAlert, props, document.querySelector(targetSelector));
+
+/**
+ * @param {ComponentProps} props
+ */
+export const initDivider = ({ targetSelector, props }) =>
+  RenderReact(Divider, props, document.querySelector(targetSelector));
+
 export {
   initCardCarousel,
   initTestimonialCarousel,
   initImageCarousel,
   initImageGalleryCarousel,
 };
+import { Tooltip } from "../../components/Tooltip/Tooltip.tsx";
+
+export const initTooltip = ({ targetSelector, props }) =>
+  RenderReact(Tooltip, props, document.querySelector(targetSelector));
+
+/**
+ * @param {ComponentProps} props
+ */
+export const initList = ({ targetSelector, props }) =>
+  RenderReact(List, props, document.querySelector(targetSelector));
+

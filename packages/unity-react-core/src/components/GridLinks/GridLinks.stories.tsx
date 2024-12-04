@@ -75,8 +75,6 @@ const defaultStoryProps = {
   textColor: gridLinksTextColor.NONE,
   gridLinkItems,
   // children: "Content to be displayed",
-  // Display the data-ga attributes on the links for Storybook HTML references.
-  useExternal: true,
 };
 
 const gridLinksTemplate = ({ bgColor, ...args }) => (

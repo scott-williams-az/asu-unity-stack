@@ -5,7 +5,7 @@ export interface Logo {
   alt: string;
   src: string;
   mobileSrc: string;
-  brandLink: string;
+  brandLink?: string;
 }
 
 export interface Button {

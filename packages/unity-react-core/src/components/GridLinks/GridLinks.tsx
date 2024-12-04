@@ -29,11 +29,6 @@ export interface GridLinksProps {
    */
   textColor?: gridLinksTextColor;
   /**
-   * Use external. True adds data-ga* attributes to HTML. False (default)
-   * enables internal React-based data layer handling.
-   */
-  useExternal?: boolean;
-  /**
    * The element where we will position the dialog beside.
    */
   children?: ReactElement | ReactElement[] | string;
@@ -43,7 +38,6 @@ export const GridLinks: React.FC<GridLinksProps> = ({
   gridLinkItems,
   numColumns,
   textColor,
-  useExternal = false,
   children,
 }) => {
   return (
@@ -66,8 +60,7 @@ export const GridLinks: React.FC<GridLinksProps> = ({
                   ...gaDefaultObject,
                   text: item.label,
                   section: `grid links ${item.label}`,
-                },
-                useExternal
+                }
               )}
             >
               <span className={`fa fa-fw ${item.icon}`} />

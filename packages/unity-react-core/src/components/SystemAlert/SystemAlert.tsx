@@ -22,18 +22,12 @@ export interface SystemAlertProps {
    * If the alert can be dismissed
    */
   dismissable: boolean;
-  /**
-   * Use external. True adds data-ga* attributes to HTML. False (default)
-   * enables internal React-based data layer handling.
-   */
-  useExternal?: boolean;
 }
 
 export const SystemAlert: React.FC<SystemAlertProps> = ({
   type,
   dismissable,
   children,
-  useExternal,
 }) => {
   const [isVisible, setIsVisible] = useState(true);
   const handleClose = () => setIsVisible(false);
@@ -61,7 +55,7 @@ export const SystemAlert: React.FC<SystemAlertProps> = ({
     },
   };
 
-  const environmentAction = useExternal
+  const environmentAction = false // useExternal
     ? {
         "data-bs-dismiss": "alert", // used with BS5 and HTML
       }
@@ -91,7 +85,6 @@ export const SystemAlert: React.FC<SystemAlertProps> = ({
             <ButtonIconOnly
               icon={["fas", "times"]}
               {...environmentAction}
-              useExternal={useExternal}
             />
           </div>
         )}

@@ -29,7 +29,6 @@ export const ButtonIconOnly = ({
   size,
   cardTitle,
   className,
-  useExternal,
   ...rest
 }) => {
   return (
@@ -47,7 +46,7 @@ export const ButtonIconOnly = ({
           text: `${icon?.[1]} icon`,
           section: cardTitle,
         },
-        useExternal,
+        false, //useExternal,
         onClick
       )}
       // eslint-disable-next-line react/jsx-props-no-spreading
@@ -89,7 +88,6 @@ ButtonIconOnly.propTypes = {
   */
   size: PropTypes.oneOf(["large", "small"]),
   className: PropTypes.string,
-  useExternal: PropTypes.bool,
 };
 
 ButtonIconOnly.defaultProps = {

@@ -1,3 +1,10 @@
+# [@asu/component-carousel-v2.4.0](https://github.com/asu/asu-unity-stack/compare/@asu/component-carousel-v2.3.0...@asu/component-carousel-v2.4.0) (2024-12-04)
+
+
+### Features
+
+* **component-carousel:** added margin to carousel dots ([d050ecc](https://github.com/asu/asu-unity-stack/commit/d050eccf618b9e8f8c6b1ca040a9eb4abfd756eb))
+
 # [@asu/component-carousel-v2.3.0](https://github.com/asu/asu-unity-stack/compare/@asu/component-carousel-v2.2.0...@asu/component-carousel-v2.3.0) (2024-12-02)
 
 

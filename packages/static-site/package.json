@@ -11,9 +11,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@asu/component-header-footer": "*",
-    "@asu/unity-bootstrap-theme": "*",
-    "@asu/unity-react-core": "*",
+    "@asu/component-header-footer": "workspace:^",
+    "@asu/unity-bootstrap-theme": "workspace:^",
+    "@asu/unity-react-core": "workspace:^",
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",

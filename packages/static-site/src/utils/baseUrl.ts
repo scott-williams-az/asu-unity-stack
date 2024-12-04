@@ -4,7 +4,7 @@ export const getBaseUrl = () => {
   const pathname = window.location.pathname;
 
   let basename = "/";
-  if(host === "asu.github.io") {
+  if(host.indexOf(".github.io")>-1) {
     basename = "/asu-unity-stack";
   } else if(pathname.indexOf("/build/") > -1) {
     basename = window.location.pathname.replace(/(.*?\/build\/).*/, "$1");

@@ -7,6 +7,7 @@ import useGetNavBar from "../hooks/useGetNavBar";
 function Navbar() {
   const navBar: NavTreeProps[] = useGetNavBar();
 
+  // @ts-expect-error-missing-props
   const headerProps: HeaderProps = {
     logo: {
       alt: "logo",
@@ -17,7 +18,7 @@ function Navbar() {
     navTree: navBar,
     title: "Unity Design System",
     searchUrl: "https://search.asu.edu/search",
-  } as HeaderProps;
+  };
 
   return (
     <div style={{ position: "sticky", zIndex: "31" }}>

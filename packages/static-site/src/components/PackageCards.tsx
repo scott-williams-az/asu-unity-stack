@@ -21,7 +21,7 @@ const PackageCards = () => {
       cards.push({
         title: p.name,
         description: p.description,
-        href: `./${p.name}/index.html`,
+        href: `/${p.name}/index.html`,
         linkLabel: "Launch",
         isRoute: true,
       });

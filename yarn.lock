@@ -26,7 +26,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@asu/app-degree-pages@workspace:packages/app-degree-pages"
   dependencies:
-    "@asu/components-core": "npm:^3.0.0"
+    "@asu/components-core": "workspace:^"
     "@babel/core": "npm:^7.13.14"
     "@babel/plugin-syntax-jsx": "npm:^7.14.5"
     "@babel/plugin-transform-react-jsx": "npm:^7.13.12"
@@ -82,8 +82,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@asu/app-rfi@workspace:packages/app-rfi"
   dependencies:
-    "@asu/components-core": "npm:^3.0.0"
-    "@asu/unity-bootstrap-theme": "npm:^1.0.0"
+    "@asu/components-core": "workspace:^"
+    "@asu/unity-bootstrap-theme": "workspace:^"
     "@babel/core": "npm:^7.13.14"
     "@babel/eslint-parser": "npm:^7.13.14"
     "@babel/plugin-proposal-class-properties": "npm:^7.13.0"
@@ -134,7 +134,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@asu/app-webdir-ui@workspace:packages/app-webdir-ui"
   dependencies:
-    "@asu/components-core": "npm:^3.0.0"
+    "@asu/components-core": "workspace:^"
     "@babel/core": "npm:^7.13.14"
     "@babel/plugin-syntax-jsx": "npm:^7.14.5"
     "@babel/plugin-transform-react-jsx": "npm:^7.13.12"
@@ -248,7 +248,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@asu/component-events@workspace:packages/component-events"
   dependencies:
-    "@asu/components-core": "npm:^3.0.0"
+    "@asu/components-core": "workspace:^"
     "@babel/core": "npm:^7.13.14"
     "@babel/plugin-syntax-jsx": "npm:^7.14.5"
     "@babel/plugin-transform-runtime": "npm:^7.14.5"
@@ -340,7 +340,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@asu/component-header-footer@npm:*, @asu/component-header-footer@workspace:packages/component-header-footer":
+"@asu/component-header-footer@workspace:^, @asu/component-header-footer@workspace:packages/component-header-footer":
   version: 0.0.0-use.local
   resolution: "@asu/component-header-footer@workspace:packages/component-header-footer"
   dependencies:
@@ -446,7 +446,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@asu/component-news@workspace:packages/component-news"
   dependencies:
-    "@asu/components-core": "npm:^3.0.0"
+    "@asu/components-core": "workspace:^"
     "@babel/core": "npm:^7.13.14"
     "@babel/plugin-syntax-jsx": "npm:^7.14.5"
     "@babel/plugin-transform-react-jsx": "npm:^7.13.12"
@@ -500,30 +500,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@asu/components-core@npm:^3.0.0":
-  version: 3.3.8
-  resolution: "@asu/components-core@npm:3.3.8::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40asu%2Fcomponents-core%2F3.3.8%2Fad2ca007b5be0a22721e42b72d7b9d66b493cae6"
-  dependencies:
-    classnames: "npm:^2.2.6"
-    date-fns: "npm:^2.19.0"
-    phone-fns: "npm:^3.2.3"
-    prop-types: "npm:^15.7.2"
-    styled-components: "npm:^5.3.0"
-  peerDependencies:
-    react: ">= 16.14.0 < 18"
-    react-dom: ">= 16.14.0 < 18"
-    react-router-dom: ">= 5.2.0 < 7"
-    react-share: ^4.4.0
-    reactstrap: ^8.9.0
-  checksum: 10c0/0ba2291627e3c85317c3fa313bb300672927d44cafbc5dfc34933fdbbc0f90f525314501ff82116c7a52c22b5d93db9f1913a056a06addb6a336d8c4de4aa840
-  languageName: node
-  linkType: hard
-
-"@asu/components-core@workspace:packages/components-core":
+"@asu/components-core@workspace:^, @asu/components-core@workspace:packages/components-core":
   version: 0.0.0-use.local
   resolution: "@asu/components-core@workspace:packages/components-core"
   dependencies:
-    "@asu/unity-bootstrap-theme": "npm:^1.0.0"
+    "@asu/unity-bootstrap-theme": "workspace:^"
     "@babel/cli": "npm:^7.19.3"
     "@babel/core": "npm:^7.21.3"
     "@babel/plugin-transform-runtime": "npm:^7.19.6"
@@ -577,9 +558,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@asu/static-site@workspace:packages/static-site"
   dependencies:
-    "@asu/component-header-footer": "npm:*"
-    "@asu/unity-bootstrap-theme": "npm:*"
-    "@asu/unity-react-core": "npm:*"
+    "@asu/component-header-footer": "workspace:^"
+    "@asu/unity-bootstrap-theme": "workspace:^"
+    "@asu/unity-react-core": "workspace:^"
     "@fortawesome/fontawesome-svg-core": "npm:^6.4.2"
     "@fortawesome/free-brands-svg-icons": "npm:^6.4.2"
     "@fortawesome/free-solid-svg-icons": "npm:^6.4.2"
@@ -602,7 +583,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@asu/unity-bootstrap-theme@npm:*, @asu/unity-bootstrap-theme@npm:^1.0.0, @asu/unity-bootstrap-theme@workspace:packages/unity-bootstrap-theme":
+"@asu/unity-bootstrap-theme@workspace:^, @asu/unity-bootstrap-theme@workspace:packages/unity-bootstrap-theme":
   version: 0.0.0-use.local
   resolution: "@asu/unity-bootstrap-theme@workspace:packages/unity-bootstrap-theme"
   dependencies:
@@ -659,11 +640,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@asu/unity-react-core@npm:*, @asu/unity-react-core@workspace:packages/unity-react-core":
+"@asu/unity-react-core@workspace:^, @asu/unity-react-core@workspace:packages/unity-react-core":
   version: 0.0.0-use.local
   resolution: "@asu/unity-react-core@workspace:packages/unity-react-core"
   dependencies:
-    "@asu/unity-bootstrap-theme": "npm:^1.0.0"
+    "@asu/unity-bootstrap-theme": "workspace:^"
     "@babel/cli": "npm:^7.19.3"
     "@babel/core": "npm:^7.21.3"
     "@babel/plugin-transform-runtime": "npm:^7.19.6"

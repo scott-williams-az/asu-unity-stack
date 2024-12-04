@@ -157,6 +157,10 @@ Cards - Table of Contents
   margin-left: var(--card-child-margin);
   margin-right: var(--card-child-margin);
   padding: 0 var(--card-child-padding) 24px var(--card-child-padding);
+
+  a {
+    padding: 0.8rem 0.8rem 0.8rem 0;
+  }
 }
 
 .card-footer {

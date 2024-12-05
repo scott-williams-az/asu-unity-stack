@@ -5,7 +5,7 @@ import { Decorator } from '@storybook/react';
 import React, { useEffect, forwardRef, useLayoutEffect, StrictMode } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 
-import { identifierPrefix } from '../../../shared/hooks/useBaseSpecificFramework';
+import { identifierPrefix } from '../src/components/GaEventWrapper/useBaseSpecificFramework';
 
 const Full = ({ children, rootRef }) => (
   <div ref={rootRef} id="html-root" className="col uds-full-width">

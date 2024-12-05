@@ -1,6 +1,7 @@
 import { trackGAEvent } from "@shared";
-import { useBaseSpecificFramework } from "@shared/hooks/useBaseSpecificFramework";
 import React, { ReactElement } from "react";
+
+import { useBaseSpecificFramework } from "./useBaseSpecificFramework";
 
 export type GaEventType = {
   text: string;

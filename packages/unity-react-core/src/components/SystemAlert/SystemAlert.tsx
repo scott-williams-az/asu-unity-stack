@@ -1,8 +1,8 @@
-import { useBaseSpecificFramework } from "@shared/hooks/useBaseSpecificFramework";
 import classnames from "classnames";
 import React, { ReactElement, useState } from "react";
 
 import { ButtonIconOnly } from "../ButtonIconOnly/ButtonIconOnly";
+import { useBaseSpecificFramework } from "../GaEventWrapper/useBaseSpecificFramework";
 
 export enum SystemAlertType {
   WARNING = "warning",

@@ -4,7 +4,6 @@ import { useId } from "react";
 export const identifierPrefix = "staticMarkup";
 
 export function useBaseSpecificFramework() {
-
   const id = useId();
   const isBootstrap = id.indexOf(identifierPrefix) > -1 ? true : undefined;
   const isReact = !isBootstrap ? true : undefined;
@@ -14,4 +13,3 @@ export function useBaseSpecificFramework() {
     isReact,
   };
 }
-

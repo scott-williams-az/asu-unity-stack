@@ -1,13 +1,10 @@
 import React from "react";
 
 import { GridLinks, GridLinksProps } from "./GridLinks";
-import {
-  gridLinksNumColumns,
-  gridLinksTextColor,
-} from "./GridLinksConstants";
+import { gridLinksNumColumns, gridLinksTextColor } from "./GridLinksConstants";
 
 const gridLinksBgColorClassName = {
-  None: "",
+  "None": "",
   "Gray 1": "bg-gray-1",
   "Gray 7": "bg-gray-7",
 };
@@ -15,16 +12,18 @@ const gridLinksBgColorClassName = {
 export default {
   title: "Components/Grid Links",
   component: GridLinks,
+  parameters: {},
   argTypes: {
     bgColor: {
       name: "Background color of the section",
-      description: "Background color is not applied to the component, but to the section wrapper.",
+      description:
+        "Background color is not applied to the component, but to the section wrapper.",
       options: Object.keys(gridLinksBgColorClassName),
       control: {
         type: "radio",
       },
-    }
-  }
+    },
+  },
 };
 
 const gridLinkItems = [
@@ -75,8 +74,6 @@ const defaultStoryProps = {
   textColor: gridLinksTextColor.NONE,
   gridLinkItems,
   // children: "Content to be displayed",
-  // Display the data-ga attributes on the links for Storybook HTML references.
-  useExternal: true,
 };
 
 const gridLinksTemplate = ({ bgColor, ...args }) => (

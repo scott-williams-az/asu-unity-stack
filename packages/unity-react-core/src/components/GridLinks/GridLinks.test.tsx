@@ -32,7 +32,6 @@ const defaultProps = {
   textColor: gridLinksTextColor.NONE,
   gridLinkItems,
   // children: "Content to be displayed",
-  useExternal: false,
 };
 
 const renderComponent = (props: GridLinksProps) => {

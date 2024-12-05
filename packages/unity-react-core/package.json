@@ -49,7 +49,7 @@
     "test:browser": "vitest --workspace=vitest.workspace.ts"
   },
   "devDependencies": {
-    "@asu/unity-bootstrap-theme": "^1.0.0",
+    "@asu/unity-bootstrap-theme": "workspace:^",
     "@babel/cli": "^7.19.3",
     "@babel/core": "^7.21.3",
     "@babel/plugin-transform-runtime": "^7.19.6",

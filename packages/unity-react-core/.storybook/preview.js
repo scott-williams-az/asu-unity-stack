@@ -34,7 +34,7 @@ const preview = {
     framework: {
       name: 'Framework',
       description: 'Framework to use',
-      defaultValue: 'react',
+      defaultValue: 'bootstrap',
       toolbar: {
         title: 'Framework',
         icon: 'cog',

@@ -18,16 +18,7 @@ function nr() {
   return te.Fragment = i, te.jsx = f, te.jsxs = f, te;
 }
 Ct.exports = nr();
-var U = Ct.exports;
-const ar = "staticMarkup";
-function Mt() {
-  const r = tr().indexOf(ar) > -1 ? !0 : void 0;
-  return {
-    isBootstrap: r,
-    isReact: r ? void 0 : !0
-  };
-}
-var Dt = { exports: {} };
+var U = Ct.exports, Mt = { exports: {} };
 (function(t) {
   (function() {
     var r = {}.hasOwnProperty;
@@ -57,21 +48,21 @@ var Dt = { exports: {} };
     }
     t.exports ? (i.default = i, t.exports = i) : window.classNames = i;
   })();
-})(Dt);
-var ir = Dt.exports;
-const or = /* @__PURE__ */ wt(ir);
-var It = { exports: {} }, Pe, yt;
-function sr() {
+})(Mt);
+var ar = Mt.exports;
+const ir = /* @__PURE__ */ wt(ar);
+var Dt = { exports: {} }, Pe, yt;
+function or() {
   if (yt) return Pe;
   yt = 1;
   var t = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED";
   return Pe = t, Pe;
 }
 var Fe, At;
-function lr() {
+function sr() {
   if (At) return Fe;
   At = 1;
-  var t = sr();
+  var t = or();
   function r() {
   }
   function i() {
@@ -115,9 +106,9 @@ function lr() {
     return l.PropTypes = l, l;
   }, Fe;
 }
-It.exports = lr()();
-var cr = It.exports;
-const T = /* @__PURE__ */ wt(cr);
+Dt.exports = sr()();
+var lr = Dt.exports;
+const T = /* @__PURE__ */ wt(lr);
 function W(t) {
   "@babel/helpers - typeof";
   return W = typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? function(r) {
@@ -131,7 +122,7 @@ function $e(t, r) {
     return o.__proto__ = c, o;
   }, $e(t, r);
 }
-function ur() {
+function cr() {
   if (typeof Reflect > "u" || !Reflect.construct || Reflect.construct.sham) return !1;
   if (typeof Proxy == "function") return !0;
   try {
@@ -142,7 +133,7 @@ function ur() {
   }
 }
 function me(t, r, i) {
-  return ur() ? me = Reflect.construct : me = function(c, l, f) {
+  return cr() ? me = Reflect.construct : me = function(c, l, f) {
     var m = [null];
     m.push.apply(m, l);
     var d = Function.bind.apply(c, m), O = new d();
@@ -150,15 +141,15 @@ function me(t, r, i) {
   }, me.apply(null, arguments);
 }
 function x(t) {
-  return fr(t) || pr(t) || mr(t) || dr();
+  return ur(t) || fr(t) || pr(t) || mr();
 }
-function fr(t) {
+function ur(t) {
   if (Array.isArray(t)) return qe(t);
 }
-function pr(t) {
+function fr(t) {
   if (typeof Symbol < "u" && t[Symbol.iterator] != null || t["@@iterator"] != null) return Array.from(t);
 }
-function mr(t, r) {
+function pr(t, r) {
   if (t) {
     if (typeof t == "string") return qe(t, r);
     var i = Object.prototype.toString.call(t).slice(8, -1);
@@ -171,11 +162,11 @@ function qe(t, r) {
   for (var i = 0, o = new Array(r); i < r; i++) o[i] = t[i];
   return o;
 }
-function dr() {
+function mr() {
   throw new TypeError(`Invalid attempt to spread non-iterable instance.
 In order to be iterable, non-array objects must have a [Symbol.iterator]() method.`);
 }
-var vr = Object.hasOwnProperty, gt = Object.setPrototypeOf, Tr = Object.isFrozen, _r = Object.getPrototypeOf, hr = Object.getOwnPropertyDescriptor, R = Object.freeze, w = Object.seal, Er = Object.create, xt = typeof Reflect < "u" && Reflect, ve = xt.apply, Ve = xt.construct;
+var dr = Object.hasOwnProperty, gt = Object.setPrototypeOf, vr = Object.isFrozen, Tr = Object.getPrototypeOf, _r = Object.getOwnPropertyDescriptor, R = Object.freeze, w = Object.seal, hr = Object.create, It = typeof Reflect < "u" && Reflect, ve = It.apply, Ve = It.construct;
 ve || (ve = function(r, i, o) {
   return r.apply(i, o);
 });
@@ -188,7 +179,7 @@ w || (w = function(r) {
 Ve || (Ve = function(r, i) {
   return me(r, x(i));
 });
-var yr = C(Array.prototype.forEach), St = C(Array.prototype.pop), re = C(Array.prototype.push), de = C(String.prototype.toLowerCase), Ue = C(String.prototype.toString), bt = C(String.prototype.match), I = C(String.prototype.replace), Ar = C(String.prototype.indexOf), gr = C(String.prototype.trim), g = C(RegExp.prototype.test), He = Sr(TypeError);
+var Er = C(Array.prototype.forEach), St = C(Array.prototype.pop), re = C(Array.prototype.push), de = C(String.prototype.toLowerCase), Ue = C(String.prototype.toString), bt = C(String.prototype.match), I = C(String.prototype.replace), yr = C(String.prototype.indexOf), Ar = C(String.prototype.trim), g = C(RegExp.prototype.test), He = gr(TypeError);
 function C(t) {
   return function(r) {
     for (var i = arguments.length, o = new Array(i > 1 ? i - 1 : 0), c = 1; c < i; c++)
@@ -196,7 +187,7 @@ function C(t) {
     return ve(t, r, o);
   };
 }
-function Sr(t) {
+function gr(t) {
   return function() {
     for (var r = arguments.length, i = new Array(r), o = 0; o < r; o++)
       i[o] = arguments[o];
@@ -210,43 +201,43 @@ function u(t, r, i) {
     var l = r[c];
     if (typeof l == "string") {
       var f = i(l);
-      f !== l && (Tr(r) || (r[c] = f), l = f);
+      f !== l && (vr(r) || (r[c] = f), l = f);
     }
     t[l] = !0;
   }
   return t;
 }
 function $(t) {
-  var r = Er(null), i;
+  var r = hr(null), i;
   for (i in t)
-    ve(vr, t, [i]) === !0 && (r[i] = t[i]);
+    ve(dr, t, [i]) === !0 && (r[i] = t[i]);
   return r;
 }
 function fe(t, r) {
   for (; t !== null; ) {
-    var i = hr(t, r);
+    var i = _r(t, r);
     if (i) {
       if (i.get)
         return C(i.get);
       if (typeof i.value == "function")
         return C(i.value);
     }
-    t = _r(t);
+    t = Tr(t);
   }
   function o(c) {
     return console.warn("fallback value for", c), null;
   }
   return o;
 }
-var Rt = R(["a", "abbr", "acronym", "address", "area", "article", "aside", "audio", "b", "bdi", "bdo", "big", "blink", "blockquote", "body", "br", "button", "canvas", "caption", "center", "cite", "code", "col", "colgroup", "content", "data", "datalist", "dd", "decorator", "del", "details", "dfn", "dialog", "dir", "div", "dl", "dt", "element", "em", "fieldset", "figcaption", "figure", "font", "footer", "form", "h1", "h2", "h3", "h4", "h5", "h6", "head", "header", "hgroup", "hr", "html", "i", "img", "input", "ins", "kbd", "label", "legend", "li", "main", "map", "mark", "marquee", "menu", "menuitem", "meter", "nav", "nobr", "ol", "optgroup", "option", "output", "p", "picture", "pre", "progress", "q", "rp", "rt", "ruby", "s", "samp", "section", "select", "shadow", "small", "source", "spacer", "span", "strike", "strong", "style", "sub", "summary", "sup", "table", "tbody", "td", "template", "textarea", "tfoot", "th", "thead", "time", "tr", "track", "tt", "u", "ul", "var", "video", "wbr"]), We = R(["svg", "a", "altglyph", "altglyphdef", "altglyphitem", "animatecolor", "animatemotion", "animatetransform", "circle", "clippath", "defs", "desc", "ellipse", "filter", "font", "g", "glyph", "glyphref", "hkern", "image", "line", "lineargradient", "marker", "mask", "metadata", "mpath", "path", "pattern", "polygon", "polyline", "radialgradient", "rect", "stop", "style", "switch", "symbol", "text", "textpath", "title", "tref", "tspan", "view", "vkern"]), ze = R(["feBlend", "feColorMatrix", "feComponentTransfer", "feComposite", "feConvolveMatrix", "feDiffuseLighting", "feDisplacementMap", "feDistantLight", "feFlood", "feFuncA", "feFuncB", "feFuncG", "feFuncR", "feGaussianBlur", "feImage", "feMerge", "feMergeNode", "feMorphology", "feOffset", "fePointLight", "feSpecularLighting", "feSpotLight", "feTile", "feTurbulence"]), br = R(["animate", "color-profile", "cursor", "discard", "fedropshadow", "font-face", "font-face-format", "font-face-name", "font-face-src", "font-face-uri", "foreignobject", "hatch", "hatchpath", "mesh", "meshgradient", "meshpatch", "meshrow", "missing-glyph", "script", "set", "solidcolor", "unknown", "use"]), Ge = R(["math", "menclose", "merror", "mfenced", "mfrac", "mglyph", "mi", "mlabeledtr", "mmultiscripts", "mn", "mo", "mover", "mpadded", "mphantom", "mroot", "mrow", "ms", "mspace", "msqrt", "mstyle", "msub", "msup", "msubsup", "mtable", "mtd", "mtext", "mtr", "munder", "munderover"]), Rr = R(["maction", "maligngroup", "malignmark", "mlongdiv", "mscarries", "mscarry", "msgroup", "mstack", "msline", "msrow", "semantics", "annotation", "annotation-xml", "mprescripts", "none"]), Ot = R(["#text"]), Lt = R(["accept", "action", "align", "alt", "autocapitalize", "autocomplete", "autopictureinpicture", "autoplay", "background", "bgcolor", "border", "capture", "cellpadding", "cellspacing", "checked", "cite", "class", "clear", "color", "cols", "colspan", "controls", "controlslist", "coords", "crossorigin", "datetime", "decoding", "default", "dir", "disabled", "disablepictureinpicture", "disableremoteplayback", "download", "draggable", "enctype", "enterkeyhint", "face", "for", "headers", "height", "hidden", "high", "href", "hreflang", "id", "inputmode", "integrity", "ismap", "kind", "label", "lang", "list", "loading", "loop", "low", "max", "maxlength", "media", "method", "min", "minlength", "multiple", "muted", "name", "nonce", "noshade", "novalidate", "nowrap", "open", "optimum", "pattern", "placeholder", "playsinline", "poster", "preload", "pubdate", "radiogroup", "readonly", "rel", "required", "rev", "reversed", "role", "rows", "rowspan", "spellcheck", "scope", "selected", "shape", "size", "sizes", "span", "srclang", "start", "src", "srcset", "step", "style", "summary", "tabindex", "title", "translate", "type", "usemap", "valign", "value", "width", "xmlns", "slot"]), Be = R(["accent-height", "accumulate", "additive", "alignment-baseline", "ascent", "attributename", "attributetype", "azimuth", "basefrequency", "baseline-shift", "begin", "bias", "by", "class", "clip", "clippathunits", "clip-path", "clip-rule", "color", "color-interpolation", "color-interpolation-filters", "color-profile", "color-rendering", "cx", "cy", "d", "dx", "dy", "diffuseconstant", "direction", "display", "divisor", "dur", "edgemode", "elevation", "end", "fill", "fill-opacity", "fill-rule", "filter", "filterunits", "flood-color", "flood-opacity", "font-family", "font-size", "font-size-adjust", "font-stretch", "font-style", "font-variant", "font-weight", "fx", "fy", "g1", "g2", "glyph-name", "glyphref", "gradientunits", "gradienttransform", "height", "href", "id", "image-rendering", "in", "in2", "k", "k1", "k2", "k3", "k4", "kerning", "keypoints", "keysplines", "keytimes", "lang", "lengthadjust", "letter-spacing", "kernelmatrix", "kernelunitlength", "lighting-color", "local", "marker-end", "marker-mid", "marker-start", "markerheight", "markerunits", "markerwidth", "maskcontentunits", "maskunits", "max", "mask", "media", "method", "mode", "min", "name", "numoctaves", "offset", "operator", "opacity", "order", "orient", "orientation", "origin", "overflow", "paint-order", "path", "pathlength", "patterncontentunits", "patterntransform", "patternunits", "points", "preservealpha", "preserveaspectratio", "primitiveunits", "r", "rx", "ry", "radius", "refx", "refy", "repeatcount", "repeatdur", "restart", "result", "rotate", "scale", "seed", "shape-rendering", "specularconstant", "specularexponent", "spreadmethod", "startoffset", "stddeviation", "stitchtiles", "stop-color", "stop-opacity", "stroke-dasharray", "stroke-dashoffset", "stroke-linecap", "stroke-linejoin", "stroke-miterlimit", "stroke-opacity", "stroke", "stroke-width", "style", "surfacescale", "systemlanguage", "tabindex", "targetx", "targety", "transform", "transform-origin", "text-anchor", "text-decoration", "text-rendering", "textlength", "type", "u1", "u2", "unicode", "values", "viewbox", "visibility", "version", "vert-adv-y", "vert-origin-x", "vert-origin-y", "width", "word-spacing", "wrap", "writing-mode", "xchannelselector", "ychannelselector", "x", "x1", "x2", "xmlns", "y", "y1", "y2", "z", "zoomandpan"]), Nt = R(["accent", "accentunder", "align", "bevelled", "close", "columnsalign", "columnlines", "columnspan", "denomalign", "depth", "dir", "display", "displaystyle", "encoding", "fence", "frame", "height", "href", "id", "largeop", "length", "linethickness", "lspace", "lquote", "mathbackground", "mathcolor", "mathsize", "mathvariant", "maxsize", "minsize", "movablelimits", "notation", "numalign", "open", "rowalign", "rowlines", "rowspacing", "rowspan", "rspace", "rquote", "scriptlevel", "scriptminsize", "scriptsizemultiplier", "selection", "separator", "separators", "stretchy", "subscriptshift", "supscriptshift", "symmetric", "voffset", "width", "xmlns"]), pe = R(["xlink:href", "xml:id", "xlink:title", "xml:space", "xmlns:xlink"]), Or = w(/\{\{[\w\W]*|[\w\W]*\}\}/gm), Lr = w(/<%[\w\W]*|[\w\W]*%>/gm), Nr = w(/\${[\w\W]*}/gm), wr = w(/^data-[\-\w.\u00B7-\uFFFF]/), Cr = w(/^aria-[\-\w]+$/), Mr = w(
+var Rt = R(["a", "abbr", "acronym", "address", "area", "article", "aside", "audio", "b", "bdi", "bdo", "big", "blink", "blockquote", "body", "br", "button", "canvas", "caption", "center", "cite", "code", "col", "colgroup", "content", "data", "datalist", "dd", "decorator", "del", "details", "dfn", "dialog", "dir", "div", "dl", "dt", "element", "em", "fieldset", "figcaption", "figure", "font", "footer", "form", "h1", "h2", "h3", "h4", "h5", "h6", "head", "header", "hgroup", "hr", "html", "i", "img", "input", "ins", "kbd", "label", "legend", "li", "main", "map", "mark", "marquee", "menu", "menuitem", "meter", "nav", "nobr", "ol", "optgroup", "option", "output", "p", "picture", "pre", "progress", "q", "rp", "rt", "ruby", "s", "samp", "section", "select", "shadow", "small", "source", "spacer", "span", "strike", "strong", "style", "sub", "summary", "sup", "table", "tbody", "td", "template", "textarea", "tfoot", "th", "thead", "time", "tr", "track", "tt", "u", "ul", "var", "video", "wbr"]), We = R(["svg", "a", "altglyph", "altglyphdef", "altglyphitem", "animatecolor", "animatemotion", "animatetransform", "circle", "clippath", "defs", "desc", "ellipse", "filter", "font", "g", "glyph", "glyphref", "hkern", "image", "line", "lineargradient", "marker", "mask", "metadata", "mpath", "path", "pattern", "polygon", "polyline", "radialgradient", "rect", "stop", "style", "switch", "symbol", "text", "textpath", "title", "tref", "tspan", "view", "vkern"]), ze = R(["feBlend", "feColorMatrix", "feComponentTransfer", "feComposite", "feConvolveMatrix", "feDiffuseLighting", "feDisplacementMap", "feDistantLight", "feFlood", "feFuncA", "feFuncB", "feFuncG", "feFuncR", "feGaussianBlur", "feImage", "feMerge", "feMergeNode", "feMorphology", "feOffset", "fePointLight", "feSpecularLighting", "feSpotLight", "feTile", "feTurbulence"]), Sr = R(["animate", "color-profile", "cursor", "discard", "fedropshadow", "font-face", "font-face-format", "font-face-name", "font-face-src", "font-face-uri", "foreignobject", "hatch", "hatchpath", "mesh", "meshgradient", "meshpatch", "meshrow", "missing-glyph", "script", "set", "solidcolor", "unknown", "use"]), Ge = R(["math", "menclose", "merror", "mfenced", "mfrac", "mglyph", "mi", "mlabeledtr", "mmultiscripts", "mn", "mo", "mover", "mpadded", "mphantom", "mroot", "mrow", "ms", "mspace", "msqrt", "mstyle", "msub", "msup", "msubsup", "mtable", "mtd", "mtext", "mtr", "munder", "munderover"]), br = R(["maction", "maligngroup", "malignmark", "mlongdiv", "mscarries", "mscarry", "msgroup", "mstack", "msline", "msrow", "semantics", "annotation", "annotation-xml", "mprescripts", "none"]), Ot = R(["#text"]), Lt = R(["accept", "action", "align", "alt", "autocapitalize", "autocomplete", "autopictureinpicture", "autoplay", "background", "bgcolor", "border", "capture", "cellpadding", "cellspacing", "checked", "cite", "class", "clear", "color", "cols", "colspan", "controls", "controlslist", "coords", "crossorigin", "datetime", "decoding", "default", "dir", "disabled", "disablepictureinpicture", "disableremoteplayback", "download", "draggable", "enctype", "enterkeyhint", "face", "for", "headers", "height", "hidden", "high", "href", "hreflang", "id", "inputmode", "integrity", "ismap", "kind", "label", "lang", "list", "loading", "loop", "low", "max", "maxlength", "media", "method", "min", "minlength", "multiple", "muted", "name", "nonce", "noshade", "novalidate", "nowrap", "open", "optimum", "pattern", "placeholder", "playsinline", "poster", "preload", "pubdate", "radiogroup", "readonly", "rel", "required", "rev", "reversed", "role", "rows", "rowspan", "spellcheck", "scope", "selected", "shape", "size", "sizes", "span", "srclang", "start", "src", "srcset", "step", "style", "summary", "tabindex", "title", "translate", "type", "usemap", "valign", "value", "width", "xmlns", "slot"]), Be = R(["accent-height", "accumulate", "additive", "alignment-baseline", "ascent", "attributename", "attributetype", "azimuth", "basefrequency", "baseline-shift", "begin", "bias", "by", "class", "clip", "clippathunits", "clip-path", "clip-rule", "color", "color-interpolation", "color-interpolation-filters", "color-profile", "color-rendering", "cx", "cy", "d", "dx", "dy", "diffuseconstant", "direction", "display", "divisor", "dur", "edgemode", "elevation", "end", "fill", "fill-opacity", "fill-rule", "filter", "filterunits", "flood-color", "flood-opacity", "font-family", "font-size", "font-size-adjust", "font-stretch", "font-style", "font-variant", "font-weight", "fx", "fy", "g1", "g2", "glyph-name", "glyphref", "gradientunits", "gradienttransform", "height", "href", "id", "image-rendering", "in", "in2", "k", "k1", "k2", "k3", "k4", "kerning", "keypoints", "keysplines", "keytimes", "lang", "lengthadjust", "letter-spacing", "kernelmatrix", "kernelunitlength", "lighting-color", "local", "marker-end", "marker-mid", "marker-start", "markerheight", "markerunits", "markerwidth", "maskcontentunits", "maskunits", "max", "mask", "media", "method", "mode", "min", "name", "numoctaves", "offset", "operator", "opacity", "order", "orient", "orientation", "origin", "overflow", "paint-order", "path", "pathlength", "patterncontentunits", "patterntransform", "patternunits", "points", "preservealpha", "preserveaspectratio", "primitiveunits", "r", "rx", "ry", "radius", "refx", "refy", "repeatcount", "repeatdur", "restart", "result", "rotate", "scale", "seed", "shape-rendering", "specularconstant", "specularexponent", "spreadmethod", "startoffset", "stddeviation", "stitchtiles", "stop-color", "stop-opacity", "stroke-dasharray", "stroke-dashoffset", "stroke-linecap", "stroke-linejoin", "stroke-miterlimit", "stroke-opacity", "stroke", "stroke-width", "style", "surfacescale", "systemlanguage", "tabindex", "targetx", "targety", "transform", "transform-origin", "text-anchor", "text-decoration", "text-rendering", "textlength", "type", "u1", "u2", "unicode", "values", "viewbox", "visibility", "version", "vert-adv-y", "vert-origin-x", "vert-origin-y", "width", "word-spacing", "wrap", "writing-mode", "xchannelselector", "ychannelselector", "x", "x1", "x2", "xmlns", "y", "y1", "y2", "z", "zoomandpan"]), Nt = R(["accent", "accentunder", "align", "bevelled", "close", "columnsalign", "columnlines", "columnspan", "denomalign", "depth", "dir", "display", "displaystyle", "encoding", "fence", "frame", "height", "href", "id", "largeop", "length", "linethickness", "lspace", "lquote", "mathbackground", "mathcolor", "mathsize", "mathvariant", "maxsize", "minsize", "movablelimits", "notation", "numalign", "open", "rowalign", "rowlines", "rowspacing", "rowspan", "rspace", "rquote", "scriptlevel", "scriptminsize", "scriptsizemultiplier", "selection", "separator", "separators", "stretchy", "subscriptshift", "supscriptshift", "symmetric", "voffset", "width", "xmlns"]), pe = R(["xlink:href", "xml:id", "xlink:title", "xml:space", "xmlns:xlink"]), Rr = w(/\{\{[\w\W]*|[\w\W]*\}\}/gm), Or = w(/<%[\w\W]*|[\w\W]*%>/gm), Lr = w(/\${[\w\W]*}/gm), Nr = w(/^data-[\-\w.\u00B7-\uFFFF]/), wr = w(/^aria-[\-\w]+$/), Cr = w(
   /^(?:(?:(?:f|ht)tps?|mailto|tel|callto|cid|xmpp):|[^a-z]|[a-z+.\-]+(?:[^a-z+.\-:]|$))/i
   // eslint-disable-line no-useless-escape
-), Dr = w(/^(?:\w+script|data):/i), Ir = w(
+), Mr = w(/^(?:\w+script|data):/i), Dr = w(
   /[\u0000-\u0020\u00A0\u1680\u180E\u2000-\u2029\u205F\u3000]/g
   // eslint-disable-line no-control-regex
-), xr = w(/^html$/i), kr = w(/^[a-z][.\w]*(-[.\w]+)+$/i), Pr = function() {
+), Ir = w(/^html$/i), xr = w(/^[a-z][.\w]*(-[.\w]+)+$/i), kr = function() {
   return typeof window > "u" ? null : window;
-}, Fr = function(r, i) {
+}, Pr = function(r, i) {
   if (W(r) !== "object" || typeof r.createPolicy != "function")
     return null;
   var o = null, c = "data-tt-policy-suffix";
@@ -265,9 +256,9 @@ var Rt = R(["a", "abbr", "acronym", "address", "area", "article", "aside", "audi
     return console.warn("TrustedTypes policy " + l + " could not be created."), null;
   }
 };
-function kt() {
-  var t = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : Pr(), r = function(e) {
-    return kt(e);
+function xt() {
+  var t = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : kr(), r = function(e) {
+    return xt(e);
   };
   if (r.version = "2.5.7", r.removed = [], !t || !t.document || t.document.nodeType !== 9)
     return r.isSupported = !1, r;
@@ -276,14 +267,14 @@ function kt() {
     var _e = o.createElement("template");
     _e.content && _e.content.ownerDocument && (o = _e.content.ownerDocument);
   }
-  var D = Fr(z, i), he = D ? D.createHTML("") : "", ae = o, Ee = ae.implementation, Ht = ae.createNodeIterator, Wt = ae.createDocumentFragment, zt = ae.getElementsByTagName, Gt = i.importNode, Xe = {};
+  var D = Pr(z, i), he = D ? D.createHTML("") : "", ae = o, Ee = ae.implementation, Ht = ae.createNodeIterator, Wt = ae.createDocumentFragment, zt = ae.getElementsByTagName, Gt = i.importNode, Xe = {};
   try {
     Xe = $(o).documentMode ? o.documentMode : {};
   } catch {
   }
   var k = {};
   r.isSupported = typeof Te == "function" && Ee && Ee.createHTMLDocument !== void 0 && Xe !== 9;
-  var ye = Or, Ae = Lr, ge = Nr, Bt = wr, jt = Cr, $t = Dr, Ke = Ir, qt = kr, Se = Mr, h = null, Ze = u({}, [].concat(x(Rt), x(We), x(ze), x(Ge), x(Ot))), E = null, Je = u({}, [].concat(x(Lt), x(Be), x(Nt), x(pe))), v = Object.seal(Object.create(null, {
+  var ye = Rr, Ae = Or, ge = Lr, Bt = Nr, jt = wr, $t = Mr, Ke = Dr, qt = xr, Se = Cr, h = null, Ze = u({}, [].concat(x(Rt), x(We), x(ze), x(Ge), x(Ot))), E = null, Je = u({}, [].concat(x(Lt), x(Be), x(Nt), x(pe))), v = Object.seal(Object.create(null, {
     tagNameCheck: {
       writable: !0,
       configurable: !1,
@@ -322,9 +313,9 @@ function kt() {
       // eslint-disable-line indent
     ) : ot, X = "FORBID_CONTENTS" in e ? u({}, e.FORBID_CONTENTS, y) : at, J = "FORBID_TAGS" in e ? u({}, e.FORBID_TAGS, y) : {}, be = "FORBID_ATTR" in e ? u({}, e.FORBID_ATTR, y) : {}, Y = "USE_PROFILES" in e ? e.USE_PROFILES : !1, Qe = e.ALLOW_ARIA_ATTR !== !1, Re = e.ALLOW_DATA_ATTR !== !1, et = e.ALLOW_UNKNOWN_PROTOCOLS || !1, tt = e.ALLOW_SELF_CLOSE_IN_ATTR !== !1, q = e.SAFE_FOR_TEMPLATES || !1, Oe = e.SAFE_FOR_XML !== !1, G = e.WHOLE_DOCUMENT || !1, V = e.RETURN_DOM || !1, ie = e.RETURN_DOM_FRAGMENT || !1, oe = e.RETURN_TRUSTED_TYPE || !1, Ne = e.FORCE_BODY || !1, rt = e.SANITIZE_DOM !== !1, nt = e.SANITIZE_NAMED_PROPS || !1, we = e.KEEP_CONTENT !== !1, Q = e.IN_PLACE || !1, Se = e.ALLOWED_URI_REGEXP || Se, K = e.NAMESPACE || P, v = e.CUSTOM_ELEMENT_HANDLING || {}, e.CUSTOM_ELEMENT_HANDLING && lt(e.CUSTOM_ELEMENT_HANDLING.tagNameCheck) && (v.tagNameCheck = e.CUSTOM_ELEMENT_HANDLING.tagNameCheck), e.CUSTOM_ELEMENT_HANDLING && lt(e.CUSTOM_ELEMENT_HANDLING.attributeNameCheck) && (v.attributeNameCheck = e.CUSTOM_ELEMENT_HANDLING.attributeNameCheck), e.CUSTOM_ELEMENT_HANDLING && typeof e.CUSTOM_ELEMENT_HANDLING.allowCustomizedBuiltInElements == "boolean" && (v.allowCustomizedBuiltInElements = e.CUSTOM_ELEMENT_HANDLING.allowCustomizedBuiltInElements), q && (Re = !1), ie && (V = !0), Y && (h = u({}, x(Ot)), E = [], Y.html === !0 && (u(h, Rt), u(E, Lt)), Y.svg === !0 && (u(h, We), u(E, Be), u(E, pe)), Y.svgFilters === !0 && (u(h, ze), u(E, Be), u(E, pe)), Y.mathMl === !0 && (u(h, Ge), u(E, Nt), u(E, pe))), e.ADD_TAGS && (h === Ze && (h = $(h)), u(h, e.ADD_TAGS, y)), e.ADD_ATTR && (E === Je && (E = $(E)), u(E, e.ADD_ATTR, y)), e.ADD_URI_SAFE_ATTR && u(Ce, e.ADD_URI_SAFE_ATTR, y), e.FORBID_CONTENTS && (X === at && (X = $(X)), u(X, e.FORBID_CONTENTS, y)), we && (h["#text"] = !0), G && u(h, ["html", "head", "body"]), h.table && (u(h, ["tbody"]), delete J.tbody), R && R(e), Z = e);
   }, ct = u({}, ["mi", "mo", "mn", "ms", "mtext"]), ut = u({}, ["annotation-xml"]), Jt = u({}, ["title", "style", "font", "a", "script"]), ce = u({}, We);
-  u(ce, ze), u(ce, br);
+  u(ce, ze), u(ce, Sr);
   var xe = u({}, Ge);
-  u(xe, Rr);
+  u(xe, br);
   var Qt = function(e) {
     var n = Te(e);
     (!n || !n.tagName) && (n = {
@@ -407,7 +398,7 @@ function kt() {
   }, ee = function(e) {
     return W(f) === "object" ? e instanceof f : e && W(e) === "object" && typeof e.nodeType == "number" && typeof e.nodeName == "string";
   }, F = function(e, n, a) {
-    k[e] && yr(k[e], function(p) {
+    k[e] && Er(k[e], function(p) {
       p.call(r, n, a, Z);
     });
   }, dt = function(e) {
@@ -452,7 +443,7 @@ function kt() {
           ) return !1;
         } else if (!Ce[n]) {
           if (!g(Se, I(a, Ke, ""))) {
-            if (!((n === "src" || n === "xlink:href" || n === "href") && e !== "script" && Ar(a, "data:") === 0 && it[e])) {
+            if (!((n === "src" || n === "xlink:href" || n === "href") && e !== "script" && yr(a, "data:") === 0 && it[e])) {
               if (!(et && !g($t, I(a, Ke, "")))) {
                 if (a)
                   return !1;
@@ -479,7 +470,7 @@ function kt() {
       for (L = S.length; L--; ) {
         n = S[L];
         var j = n, _ = j.name, ke = j.namespaceURI;
-        if (a = _ === "value" ? n.value : gr(n.value), p = y(_), A.attrName = p, A.attrValue = a, A.keepAttr = !0, A.forceKeepAttr = void 0, F("uponSanitizeAttribute", e, A), a = A.attrValue, !A.forceKeepAttr && (ue(_, e), !!A.keepAttr)) {
+        if (a = _ === "value" ? n.value : Ar(n.value), p = y(_), A.attrName = p, A.attrValue = a, A.keepAttr = !0, A.forceKeepAttr = void 0, F("uponSanitizeAttribute", e, A), a = A.attrValue, !A.forceKeepAttr && (ue(_, e), !!A.keepAttr)) {
           if (!tt && g(/\/>/i, a)) {
             ue(_, e);
             continue;
@@ -563,7 +554,7 @@ function kt() {
       return (E.shadowroot || E.shadowrootmod) && (S = Gt.call(i, S, !0)), S;
     }
     var _ = G ? n.outerHTML : n.innerHTML;
-    return G && h["!doctype"] && n.ownerDocument && n.ownerDocument.doctype && n.ownerDocument.doctype.name && g(xr, n.ownerDocument.doctype.name) && (_ = "<!DOCTYPE " + n.ownerDocument.doctype.name + `>
+    return G && h["!doctype"] && n.ownerDocument && n.ownerDocument.doctype && n.ownerDocument.doctype.name && g(Ir, n.ownerDocument.doctype.name) && (_ = "<!DOCTYPE " + n.ownerDocument.doctype.name + `>
 ` + _), q && (_ = I(_, ye, " "), _ = I(_, Ae, " "), _ = I(_, ge, " ")), D && oe ? D.createHTML(_) : _;
   }, r.setConfig = function(s) {
     Ie(s), Le = !0;
@@ -584,7 +575,7 @@ function kt() {
     k = {};
   }, r;
 }
-kt();
+xt();
 T.shape({
   event: T.string,
   action: T.string,
@@ -595,7 +586,7 @@ T.shape({
   type: T.string,
   text: T.string
 });
-const Ur = ({
+const Fr = ({
   event: t = "",
   action: r = "",
   name: i = "",
@@ -616,14 +607,22 @@ const Ur = ({
     component: m.toLowerCase()
   };
   d && d.push(O);
-}, Hr = ({
+}, Ur = "staticMarkup";
+function kt() {
+  const r = tr().indexOf(Ur) > -1 ? !0 : void 0;
+  return {
+    isBootstrap: r,
+    isReact: r ? void 0 : !0
+  };
+}
+const Hr = ({
   gaData: t,
   children: r
 }) => {
-  const { isReact: i } = Mt(), { onClick: o, ...c } = r.props;
+  const { isReact: i } = kt(), { onClick: o, ...c } = r.props;
   return i ? je.cloneElement(r, {
     ...c,
-    onClick: (l) => (Ur(t), o ? o(l) : !0)
+    onClick: (l) => (Fr(t), o ? o(l) : !0)
   }) : je.cloneElement(r, {
     ...c,
     onClick: o,
@@ -725,7 +724,7 @@ const jr = ({
   children: i
 }) => {
   var O, b, M;
-  const { isBootstrap: o, isReact: c } = Mt(), [l, f] = rr(!0), m = () => f(!1), d = {
+  const { isBootstrap: o, isReact: c } = kt(), [l, f] = rr(!0), m = () => f(!1), d = {
     warning: {
       iconTitle: "Warning",
       iconName: "bell",
@@ -750,7 +749,7 @@ const jr = ({
   return l && /* @__PURE__ */ U.jsxs(
     "div",
     {
-      className: or("alert", {
+      className: ir("alert", {
         "alert-dismissable": r,
         [`alert-${(O = d[t]) == null ? void 0 : O.alertClass}`]: t
       }),

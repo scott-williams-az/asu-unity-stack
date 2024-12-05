@@ -7,14 +7,19 @@
   .cassie-pre-banner {
     flex-direction: column;
     align-items: center;
-    max-width: 1200px;
+    width: 85% !important;
     border: 2px solid #D0D0D0 !important;
+    bottom: 2rem;
+    max-width: 900px;
   }
 
   .cassie-cookie-module .cassie-bottom {
     margin: 0 auto;
     padding: 1rem 2rem;
     background-color: #E8E8E8;
+    @media only screen and (max-width: 992px) {
+      padding: 1rem 1rem 1rem 0;
+    }
   }
 
   button.cassie-pre-banner--button.cassie-view-all {
@@ -42,8 +47,17 @@
 
   .cassie-pre-banner--button--container {
     justify-content: flex-start !important;
+    padding-left: 30px;
     width: 100% !important;
     gap: 1.5rem;
+  }
+
+  .cassie-pre-banner>.cassie-pre-banner--text  {
+    padding: 1.25rem;
+    margin: 0;
+  }
+  .cassie-pre-banner .cassie-pre-banner--button--container {
+    margin: 0;
   }
 
 
@@ -78,10 +92,6 @@
 
   .cassie-cookie-module>.cassie-cookie-modal {
     border-right: unset;
-  }
-
-  .cassie-cookie-modal--top-header {
-    display: none !important;
   }
 
   .cassie-cookie-modal--footer .cassie-cookie-modal--footer-extra {
@@ -268,6 +278,7 @@
       display: flex;
       flex-direction: column;
       gap: 10px;
+      width: 100%;
     }
 
     .cassie-cookie-modal--save-preferences--container .cassie-cookie-modal--save-preferences {

@@ -7,7 +7,7 @@ import { sanitizeDangerousMarkup } from "../../../../../shared";
 import { Button } from "../Button/Button";
 import { ButtonTag } from "../ButtonTag/ButtonTag";
 // eslint-disable-next-line import/no-cycle
-import { GaEventWrapper } from "../GaEventWrapper/GaEventWrapper.tsx";
+import { GaEventWrapper } from "../GaEventWrapper/GaEventWrapper";
 import { Image } from "../Image/Image";
 import { CardWrapper } from "./Card.styles";
 import { emailAddressParser } from "./utils/emailAddressParser";

@@ -30,6 +30,7 @@ const StaticStory = ({args, Container, children, rootRef}) => {
      * us to identify when the output is meant for bootstrap (non react)
      */
     rootRef.current.innerHTML = renderToStaticMarkup(children, { identifierPrefix: identifierPrefix });
+
   }, [args]);
   return <Container rootRef={rootRef}></Container>;
 }

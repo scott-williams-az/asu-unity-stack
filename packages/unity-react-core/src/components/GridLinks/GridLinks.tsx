@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 
-import { dataLayerRender } from "../../../../../shared/utils/datalayer-render";
+import { GaEventWrapper } from "../GaEventWrapper/GaEventWrapper";
 import {
   gridLinksNumColumns,
   gridLinksTextColor,
@@ -29,11 +29,6 @@ export interface GridLinksProps {
    */
   textColor?: gridLinksTextColor;
   /**
-   * Use external. True adds data-ga* attributes to HTML. False (default)
-   * enables internal React-based data layer handling.
-   */
-  useExternal?: boolean;
-  /**
    * The element where we will position the dialog beside.
    */
   children?: ReactElement | ReactElement[] | string;
@@ -43,7 +38,6 @@ export const GridLinks: React.FC<GridLinksProps> = ({
   gridLinkItems,
   numColumns,
   textColor,
-  useExternal = false,
   children,
 }) => {
   return (
@@ -57,22 +51,19 @@ export const GridLinks: React.FC<GridLinksProps> = ({
       >
         {gridLinkItems &&
           gridLinkItems.map(item => (
-            <a
+            <GaEventWrapper
               key={item.label + item.href}
-              href={item.href}
-              // eslint-disable-next-line react/jsx-props-no-spreading
-              {...dataLayerRender(
-                {
-                  ...gaDefaultObject,
-                  text: item.label,
-                  section: `grid links ${item.label}`,
-                },
-                useExternal
-              )}
+              gaData={{
+                ...gaDefaultObject,
+                text: item.label,
+                section: `grid links ${item.label}`,
+              }}
             >
-              <span className={`fa fa-fw ${item.icon}`} />
-              {item.label}
-            </a>
+              <a href={item.href}>
+                <span className={`fa fa-fw ${item.icon}`} />
+                {item.label}
+              </a>
+            </GaEventWrapper>
           ))}
       </div>
       <div>{children}</div>

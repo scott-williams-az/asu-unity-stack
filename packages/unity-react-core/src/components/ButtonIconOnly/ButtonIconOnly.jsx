@@ -1,9 +1,8 @@
 // @ts-check
-import { dataLayerRender } from "@shared/utils/datalayer-render";
 import PropTypes from "prop-types";
 import React from "react";
 
-import { trackGAEvent } from "../../../../../shared";
+import { GaEventWrapper } from "../GaEventWrapper/GaEventWrapper";
 
 const gaDefaultObject = {
   name: "onclick",
@@ -29,32 +28,34 @@ export const ButtonIconOnly = ({
   size,
   cardTitle,
   className,
-  useExternal,
   ...rest
 }) => {
+  const handleClick = () => {
+    onClick?.();
+  };
+
   return (
-    <button
-      type="button"
-      className={`btn btn-circle btn-circle-alt-${color} ${
-        size === "large" && "btn-circle-large"
-      } ${className}`}
-      ref={innerRef}
-      aria-label="Close"
-      // eslint-disable-next-line react/jsx-props-no-spreading
-      {...dataLayerRender(
-        {
-          ...gaDefaultObject,
-          text: `${icon?.[1]} icon`,
-          section: cardTitle,
-        },
-        useExternal,
-        onClick
-      )}
-      // eslint-disable-next-line react/jsx-props-no-spreading
-      {...rest}
+    <GaEventWrapper
+      gaData={{
+        ...gaDefaultObject,
+        text: `${icon?.[1]} icon`,
+        section: cardTitle,
+      }}
     >
-      <i className={`${icon?.[0]} fa-${icon?.[1]}`} />
-    </button>
+      <button
+        type="button"
+        className={`btn btn-circle btn-circle-alt-${color} ${
+          size === "large" && "btn-circle-large"
+        } ${className}`}
+        ref={innerRef}
+        aria-label="Close"
+        onClick={handleClick}
+        // eslint-disable-next-line react/jsx-props-no-spreading
+        {...rest}
+      >
+        <i className={`${icon?.[0]} fa-${icon?.[1]}`} />
+      </button>
+    </GaEventWrapper>
   );
 };
 
@@ -89,7 +90,6 @@ ButtonIconOnly.propTypes = {
   */
   size: PropTypes.oneOf(["large", "small"]),
   className: PropTypes.string,
-  useExternal: PropTypes.bool,
 };
 
 ButtonIconOnly.defaultProps = {

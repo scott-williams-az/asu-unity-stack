@@ -11,7 +11,6 @@ const defaultProps: SystemAlertProps = {
   type: SystemAlertType.WARNING,
   children: "Content",
   dismissable: true,
-  useExternal: true,
 };
 
 const systemAlertTemplate = (args: SystemAlertProps) => (

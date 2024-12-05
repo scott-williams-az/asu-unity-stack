@@ -2,6 +2,7 @@ import classnames from "classnames";
 import React, { ReactElement, useState } from "react";
 
 import { ButtonIconOnly } from "../ButtonIconOnly/ButtonIconOnly";
+import { useBaseSpecificFramework } from "../GaEventWrapper/useBaseSpecificFramework";
 
 export enum SystemAlertType {
   WARNING = "warning",
@@ -22,19 +23,14 @@ export interface SystemAlertProps {
    * If the alert can be dismissed
    */
   dismissable: boolean;
-  /**
-   * Use external. True adds data-ga* attributes to HTML. False (default)
-   * enables internal React-based data layer handling.
-   */
-  useExternal?: boolean;
 }
 
 export const SystemAlert: React.FC<SystemAlertProps> = ({
   type,
   dismissable,
   children,
-  useExternal,
 }) => {
+  const { isBootstrap, isReact } = useBaseSpecificFramework();
   const [isVisible, setIsVisible] = useState(true);
   const handleClose = () => setIsVisible(false);
 
@@ -61,14 +57,6 @@ export const SystemAlert: React.FC<SystemAlertProps> = ({
     },
   };
 
-  const environmentAction = useExternal
-    ? {
-        "data-bs-dismiss": "alert", // used with BS5 and HTML
-      }
-    : {
-        onClick: handleClose, // Used with react
-      };
-
   return (
     isVisible && (
       <div
@@ -90,8 +78,8 @@ export const SystemAlert: React.FC<SystemAlertProps> = ({
             {/* TODO: needs to works with data-bs-dismiss="alert"  */}
             <ButtonIconOnly
               icon={["fas", "times"]}
-              {...environmentAction}
-              useExternal={useExternal}
+              onClick={isReact && handleClose}
+              data-bs-dismiss={isBootstrap && "alert"}
             />
           </div>
         )}

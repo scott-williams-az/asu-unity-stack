@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 
-import { dataLayerRender } from "../../../../../shared/utils/datalayer-render";
+import { GaEventWrapper } from "../GaEventWrapper/GaEventWrapper";
 import {
   gridLinksNumColumns,
   gridLinksTextColor,
@@ -51,21 +51,19 @@ export const GridLinks: React.FC<GridLinksProps> = ({
       >
         {gridLinkItems &&
           gridLinkItems.map(item => (
-            <a
+            <GaEventWrapper
               key={item.label + item.href}
-              href={item.href}
-              // eslint-disable-next-line react/jsx-props-no-spreading
-              {...dataLayerRender(
-                {
-                  ...gaDefaultObject,
-                  text: item.label,
-                  section: `grid links ${item.label}`,
-                }
-              )}
+              gaData={{
+                ...gaDefaultObject,
+                text: item.label,
+                section: `grid links ${item.label}`,
+              }}
             >
-              <span className={`fa fa-fw ${item.icon}`} />
-              {item.label}
-            </a>
+              <a href={item.href}>
+                <span className={`fa fa-fw ${item.icon}`} />
+                {item.label}
+              </a>
+            </GaEventWrapper>
           ))}
       </div>
       <div>{children}</div>

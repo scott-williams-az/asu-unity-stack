@@ -5,6 +5,8 @@ import { Decorator } from '@storybook/react';
 import React, { useEffect, forwardRef, useLayoutEffect, StrictMode } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 
+import { identifierPrefix } from '../../../shared/hooks/useBaseSpecificFramework';
+
 const Full = ({ children, rootRef }) => (
   <div ref={rootRef} id="html-root" className="col uds-full-width">
     {children}
@@ -23,7 +25,8 @@ const UdsContainer = ({ children, rootRef }) => (
 
 const StaticStory = ({args, Container, children, rootRef}) => {
   useLayoutEffect(() => {
-    rootRef.current.innerHTML = renderToStaticMarkup(children);
+
+    rootRef.current.innerHTML = renderToStaticMarkup(children, { identifierPrefix: identifierPrefix });
   }, [args]);
   return <Container rootRef={rootRef}></Container>;
 }

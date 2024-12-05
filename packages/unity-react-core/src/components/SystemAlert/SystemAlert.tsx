@@ -1,3 +1,4 @@
+import { useBaseSpecificFramework } from "@shared/hooks/useBaseSpecificFramework";
 import classnames from "classnames";
 import React, { ReactElement, useState } from "react";
 
@@ -29,6 +30,7 @@ export const SystemAlert: React.FC<SystemAlertProps> = ({
   dismissable,
   children,
 }) => {
+  const { isBootstrap, isReact } = useBaseSpecificFramework();
   const [isVisible, setIsVisible] = useState(true);
   const handleClose = () => setIsVisible(false);
 
@@ -55,14 +57,6 @@ export const SystemAlert: React.FC<SystemAlertProps> = ({
     },
   };
 
-  const environmentAction = false // useExternal
-    ? {
-        "data-bs-dismiss": "alert", // used with BS5 and HTML
-      }
-    : {
-        onClick: handleClose, // Used with react
-      };
-
   return (
     isVisible && (
       <div
@@ -84,7 +78,8 @@ export const SystemAlert: React.FC<SystemAlertProps> = ({
             {/* TODO: needs to works with data-bs-dismiss="alert"  */}
             <ButtonIconOnly
               icon={["fas", "times"]}
-              {...environmentAction}
+              onClick={isReact && handleClose}
+              data-bs-dismiss={isBootstrap && "alert"}
             />
           </div>
         )}

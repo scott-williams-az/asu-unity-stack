@@ -25,7 +25,10 @@ const UdsContainer = ({ children, rootRef }) => (
 
 const StaticStory = ({args, Container, children, rootRef}) => {
   useLayoutEffect(() => {
-
+    /**
+     * Storybook only useId() will prefix the id with this identifier allowing
+     * us to identify when the output is meant for bootstrap (non react)
+     */
     rootRef.current.innerHTML = renderToStaticMarkup(children, { identifierPrefix: identifierPrefix });
   }, [args]);
   return <Container rootRef={rootRef}></Container>;

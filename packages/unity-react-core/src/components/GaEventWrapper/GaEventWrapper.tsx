@@ -15,10 +15,21 @@ export type GaEventType = {
 };
 
 export interface GaEventWrapper {
+  /**
+   * Google Analytics data
+   */
   gaData: GaEventType;
+  /**
+   * Expects a single child element
+   */
   children: ReactElement;
 }
 // TODO: Add environment variable passed in by storybook to remove the possibilty of adding code meant for bootstrap in react
+/**
+ *
+ * @param GaEventWrapper
+ * @returns
+ */
 export const GaEventWrapper: React.FC<GaEventWrapper> = ({
   gaData,
   children: child,

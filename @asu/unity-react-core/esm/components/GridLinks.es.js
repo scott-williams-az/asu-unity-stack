@@ -583,10 +583,7 @@ function Ir() {
     isReact: n ? void 0 : !0
   };
 }
-const xr = ({
-  gaData: t,
-  children: n
-}) => {
+const xr = ({ gaData: t, children: n }) => {
   const { isReact: i } = Ir(), { onClick: o, ...l } = n.props;
   return i ? je.cloneElement(n, {
     ...l,

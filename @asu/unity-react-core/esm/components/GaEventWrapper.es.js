@@ -566,10 +566,7 @@ function Mr() {
     isReact: a ? void 0 : !0
   };
 }
-const Cr = ({
-  gaData: t,
-  children: a
-}) => {
+const Cr = ({ gaData: t, children: a }) => {
   const { isReact: s } = Mr(), { onClick: o, ...u } = a.props;
   return s ? Tt.cloneElement(a, {
     ...u,

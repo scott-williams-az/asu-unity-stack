@@ -615,10 +615,7 @@ function kt() {
     isReact: r ? void 0 : !0
   };
 }
-const Hr = ({
-  gaData: t,
-  children: r
-}) => {
+const Hr = ({ gaData: t, children: r }) => {
   const { isReact: i } = kt(), { onClick: o, ...c } = r.props;
   return i ? je.cloneElement(r, {
     ...c,

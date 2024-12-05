@@ -582,10 +582,7 @@ function xr() {
     isReact: r ? void 0 : !0
   };
 }
-const kr = ({
-  gaData: t,
-  children: r
-}) => {
+const kr = ({ gaData: t, children: r }) => {
   const { isReact: i } = xr(), { onClick: o, ...u } = r.props;
   return i ? $e.cloneElement(r, {
     ...u,

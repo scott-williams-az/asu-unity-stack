@@ -5,7 +5,7 @@
 - Similar to other quick start templates:
 `create-react-app`
 
-- Development server uses a custom host, which needs to be added to your machines host file `127.0.0.1 localhost.unity.web.asu.edu`
+- Development server uses a custom host, which needs to be added to your machines host file `127.0.0.1 localhost.asu.edu`
   - Mac file location `/etc/hosts`
   - Windows file location `C:\Windows\System32\Drivers\etc\hosts`
 

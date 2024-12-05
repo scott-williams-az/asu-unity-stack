@@ -27,12 +27,10 @@ const createRoutesFromConfig = (c: Page[]) => {
           index: true,
           element: <Component />,
         }
-
       ]
     });
-
   });
-  console.log(r)
+
   return r;
 };
 
@@ -43,9 +41,6 @@ const router = createBrowserRouter([
     children: createRoutesFromConfig(configRoutes as Page[]),
   },
 ], { basename: getBaseUrl() });
-
-console.log(router)
-
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>

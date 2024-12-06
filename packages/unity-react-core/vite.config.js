@@ -78,7 +78,7 @@ export default defineConfig({
       "@shared": path.resolve(__dirname, "./../../shared"),
       "@asu/unity-bootstrap-theme": path.resolve(
         __dirname,
-        "./../packages/unity-bootstrap-theme"
+        "./../unity-bootstrap-theme"
       ),
     },
   },

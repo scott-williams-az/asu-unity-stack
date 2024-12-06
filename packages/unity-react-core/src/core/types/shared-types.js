@@ -95,6 +95,7 @@
  * @property {AccordionCard} item
  * @property {number} openCard
  * @property {ReactMouseEvent} onClick
+ * @property {import("../../components/GaEventWrapper/GaEventWrapper").GaEventType} gaData
  */
 
 /**

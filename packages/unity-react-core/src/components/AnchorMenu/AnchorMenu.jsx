@@ -7,10 +7,10 @@ import {
   debounce,
   queryFirstFocusable,
   throttle,
-  trackGAEvent,
   useMediaQuery,
 } from "../../../../../shared";
 import { Button } from "../Button/Button";
+import { GaEventWrapper } from "../GaEventWrapper/GaEventWrapper";
 import { AnchorMenuWrapper } from "./AnchorMenu.styles";
 
 const menuTitle = "On This Page";
@@ -169,13 +169,6 @@ export const AnchorMenu = ({
     window.scrollTo({ top: scrollTo, behavior: "smooth" });
   };
 
-  const trackMobileDropdownEvent = () => {
-    trackGAEvent({
-      ...defaultMobileGAEvent,
-      action: state.showMenu ? "close" : "open",
-    });
-  };
-
   const handleMenuVisibility = () => {
     setState(prevState => ({
       ...prevState,
@@ -202,23 +195,27 @@ export const AnchorMenu = ({
       >
         <div className={`${state.containerClass} uds-anchor-menu-wrapper`}>
           {isSmallDevice ? (
-            <button
-              className={classNames("mobile-menu-toggler", {
-                [`show-menu`]: state.showMenu,
-              })}
-              type="button"
-              onClick={() => {
-                trackMobileDropdownEvent();
-                handleMenuVisibility();
+            <GaEventWrapper
+              gaData={{
+                ...defaultMobileGAEvent,
+                action: state.showMenu ? "close" : "open",
               }}
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseAnchorMenu"
-              aria-controls="collapseAnchorMenu"
             >
-              <h4>
-                {menuTitle}:<i className="fas fa-chevron-down" />
-              </h4>
-            </button>
+              <button
+                className={classNames("mobile-menu-toggler", {
+                  [`show-menu`]: state.showMenu,
+                })}
+                type="button"
+                onClick={handleMenuVisibility}
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseAnchorMenu"
+                aria-controls="collapseAnchorMenu"
+              >
+                <h4>
+                  {menuTitle}:<i className="fas fa-chevron-down" />
+                </h4>
+              </button>
+            </GaEventWrapper>
           ) : (
             <h4>{menuTitle}:</h4>
           )}

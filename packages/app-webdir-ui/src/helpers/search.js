@@ -175,6 +175,7 @@ const webDirDeptsFormatter = ({
   cardSize,
   filters,
   appPathFolder,
+  grid,
 }) => {
   let localResults = null;
   let localPage = 1;
@@ -187,7 +188,7 @@ const webDirDeptsFormatter = ({
     });
   } else {
     localResults = results.results;
-    localPage = results.meta.page;
+    localPage = results?.meta?.page;
   }
   if (!!filters && filters.peopleIds) {
     localResults = localResults.filter(r => {
@@ -205,6 +206,7 @@ const webDirDeptsFormatter = ({
           options: {
             size: "large",
             profileURLBase: "https://search.asu.edu",
+            grid,
           },
           appPathFolder,
         });
@@ -322,12 +324,13 @@ export const engines = {
       "employee_weight",
     ],
     method: "GET",
-    formatter: ({ results, cardSize, filters, appPathFolder }) =>
+    formatter: ({ results, cardSize, filters, appPathFolder, grid }) =>
       webDirDeptsFormatter({
         engineName: engineNames.WEB_DIRECTORY_DEPARTMENTS,
         results,
         cardSize,
         filters,
+        grid,
         appPathFolder,
       }),
     needsTerm: false,
@@ -341,10 +344,11 @@ export const engines = {
     resultsPerSummaryPage: 6,
     supportedSortTypes: ["faculty_rank"],
     method: "GET",
-    formatter: ({ results, cardSize, filters, appPathFolder }) =>
+    formatter: ({ results, cardSize, filters, appPathFolder, grid }) =>
       webDirDeptsFormatter({
         engineName: engineNames.WEB_DIRECTORY_DEPARTMENTS,
         results,
+        grid,
         cardSize,
         filters,
         appPathFolder,
@@ -360,11 +364,12 @@ export const engines = {
     resultsPerSummaryPage: 6,
     supportedSortTypes: ["_score_desc", "last_name_desc", "last_name_asc"],
     method: "POST",
-    formatter: ({ results, cardSize, filters, appPathFolder }) =>
+    formatter: ({ results, cardSize, filters, appPathFolder, grid }) =>
       webDirDeptsFormatter({
         engineName: engineNames.WEB_DIRECTORY_PEOPLE_AND_DEPS,
         results,
         cardSize,
+        grid,
         filters,
         appPathFolder,
       }),

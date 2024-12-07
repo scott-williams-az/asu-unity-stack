@@ -4,17 +4,15 @@ import { WebDirectory } from "./index";
 
 import { FullLayout } from "../../../../shared/components/Layout";
 
-const argTypes = {
-  alphaFilter: {
-    name: "Alphabetical Filtering",
-    control: { type: "boolean" },
-  },
-};
-
 export default {
   title: "Organisms/Web Directory/Templates",
-  argTypes,
-  args: { alphaFilter: false },
+  argTypes: {
+    alphaFilter: {
+      control: "select",
+      options: ["true", "false"],
+    }
+  },
+  args: { alphaFilter: "false" },
   decorators: [story => <FullLayout>{story()}</FullLayout>],
 };
 
@@ -23,6 +21,7 @@ const display = {
   doNotDisplayProfiles: "",
   profilesPerPage: "10",
   usePager: "1",
+  grid: "true",
 };
 const filters = {
   employee: "",

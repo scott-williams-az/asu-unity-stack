@@ -19,6 +19,7 @@ const ViewSelector = ({ view, setView, label }) => {
           aria-label="Grid view"
           type="button"
           onClick={() => setView(true)}
+          aria-pressed={view}
         >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <rect x="1" y="1" width="6" height="6" rx="2" />
@@ -39,6 +40,7 @@ const ViewSelector = ({ view, setView, label }) => {
           aria-label="List view"
           type="button"
           onClick={() => setView(false)}
+          aria-pressed={!view}
         >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <rect x="2" y="1" width="6" height="6" rx="2" />

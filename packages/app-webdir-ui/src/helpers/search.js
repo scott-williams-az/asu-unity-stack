@@ -317,11 +317,7 @@ export const engines = {
     needsAuth: false,
     converter: staffConverter,
     resultsPerSummaryPage: 6,
-    supportedSortTypes: [
-      "_score_desc",
-      "last_name_desc",
-      "last_name_asc",
-    ],
+    supportedSortTypes: ["_score_desc", "last_name_desc", "last_name_asc"],
     method: "GET",
     formatter: ({ results, cardSize, filters, appPathFolder, grid }) =>
       webDirDeptsFormatter({

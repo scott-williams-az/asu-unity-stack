@@ -83,8 +83,8 @@ const ProfileCard = ({ ...props }) => {
       </a>
       <div className="person">
         {props.profileURL && (
-          <a href={props.profileURL}>
-            <span className="person-name">{props.name}</span>
+          <a className="person-name" href={props.profileURL}>
+            {props.name}
           </a>
         )}
         {!props.profileURL && <h3 className="person-name">{props.name}</h3>}
@@ -94,32 +94,44 @@ const ProfileCard = ({ ...props }) => {
         </div>
         {props.size !== "micro" && (
           <ul className="person-contact-info">
-            <li>
-              <a
-                onClick={() => sendEvent(props.email)}
-                href={`mailto:${props.email.toLowerCase()}`}
-                aria-label="Email user"
-              >
-                {props.email}
-              </a>
-            </li>
-            <li>
-              <a
-                onClick={() => sendEvent(formattedTelephone)}
-                href={`tel:${formattedTelephone}`}
-                aria-label="Call user"
-              >
-                {formattedTelephone}
-              </a>
-            </li>
-            <li>
-              <div aria-label="See user address">
-                <address className="person-address">
-                  <span className="person-street">{props.addressLine1}</span>
-                  <span className="person-city">{props.addressLine2}</span>
-                </address>
-              </div>
-            </li>
+            {props.email && (
+              <li>
+                <a
+                  onClick={() => sendEvent(props.email)}
+                  href={`mailto:${props.email.toLowerCase()}`}
+                  aria-label="Email user"
+                >
+                  {props.email}
+                </a>
+              </li>
+            )}
+            {formattedTelephone && (
+              <li>
+                <a
+                  onClick={() => sendEvent(formattedTelephone)}
+                  href={`tel:${formattedTelephone}`}
+                  aria-label="Call user"
+                >
+                  {formattedTelephone}
+                </a>
+              </li>
+            )}
+            {(props.addressLine1 || props.addressLine2) && (
+              <li>
+                <div aria-label="See user address">
+                  <address className="person-address">
+                    {props.addressLine1 && (
+                      <span className="person-street">
+                        {props.addressLine1}
+                      </span>
+                    )}
+                    {props.addressLine2 && (
+                      <span className="person-city">{props.addressLine2}</span>
+                    )}
+                  </address>
+                </div>
+              </li>
+            )}
           </ul>
         )}
         {["default", "large"].includes(props.size) && hasSocialsOrWebsite && (

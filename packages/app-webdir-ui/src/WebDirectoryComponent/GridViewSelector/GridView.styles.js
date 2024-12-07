@@ -8,7 +8,7 @@ export const GridViewSelectorContainer = styled.div`
   .view-label {
     font-size: 1rem;
     color: #333;
-    padding-right: .5rem;
+    padding-right: 0.5rem;
   }
 
   .view-buttons {
@@ -23,7 +23,7 @@ export const GridViewSelectorContainer = styled.div`
     border: none;
     cursor: pointer;
     svg rect {
-      fill: #BFBFBF;
+      fill: #bfbfbf;
     }
   }
 
@@ -38,7 +38,7 @@ export const GridViewSelectorContainer = styled.div`
 
   .view-button.active {
     svg rect {
-    fill: #191919;
+      fill: #191919;
     }
   }
 

@@ -10,7 +10,7 @@ export default {
     alphaFilter: {
       control: "select",
       options: ["true", "false"],
-    }
+    },
   },
   args: { alphaFilter: "false" },
   decorators: [story => <FullLayout>{story()}</FullLayout>],

@@ -130,11 +130,6 @@ const ASUSearchResultsList = ({
         });
 
         let filteredResults = res;
-        if (sort === "employee_weight" && engine?.name === "people_in_dept") {
-          filteredResults.results = filteredResults.results.filter(result => {
-            return Object.keys(result).length > 1;
-          });
-        }
 
         const profileService = new ProfileService(engine, filters);
         filteredResults = await profileService.processProfiles(
@@ -150,11 +145,7 @@ const ASUSearchResultsList = ({
         }
 
         if (engine.method === "GET") {
-          if (sort === "employee_weight") {
-            setCurrentPage(reformattedResults.page.current + 1);
-          } else {
-            setCurrentPage(reformattedResults.page.current);
-          }
+          setCurrentPage(reformattedResults.page.current);
         }
 
         if (engine.method === "POST") {

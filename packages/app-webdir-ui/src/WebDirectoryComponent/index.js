@@ -106,7 +106,6 @@ function WebDirectory({
         { value: "default", label: "Choose Sort", disabled: true },
         { value: "last_name_asc", label: "Last Name (ascending)" },
         { value: "last_name_desc", label: "Last Name (descending)" },
-        { value: "employee_weight", label: "Department Defined" },
       ];
     }
     return [

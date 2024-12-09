@@ -17,6 +17,15 @@ import { GaEventWrapper } from "../../GaEventWrapper/GaEventWrapper";
  * @ignore
  */
 export const AccordionCard = ({ id, item, openCard, onClick, gaData }) => {
+  const isOpen = id === openCard;
+  /**
+   * event to open accordion is happening on the closed accordion
+   * so the action seem backwards but:
+   * open will send an event with action "close"
+   * close will send an event with action "open"
+   * */
+
+  const gaAction = !isOpen ? "close" : "open";
   return (
     <div
       className={classNames("accordion-item", "mt-3", {
@@ -26,14 +35,16 @@ export const AccordionCard = ({ id, item, openCard, onClick, gaData }) => {
     >
       <div className="accordion-header">
         <h4>
-          <GaEventWrapper gaData={{ ...gaData, text: item.content.header }}>
+          <GaEventWrapper
+            gaData={{ ...gaData, action: gaAction, text: item.content.header }}
+          >
             <a
               data-testid="accordion-opener"
-              className={classNames({ [`collapsed`]: id !== openCard })}
+              className={classNames({ [`collapsed`]: !isOpen })}
               data-bs-toggle="collapse"
               href={`#card-body-${id}`}
               role="button"
-              aria-expanded={id === openCard}
+              aria-expanded={isOpen}
               aria-controls={`card-body-${id}`}
               onClick={e => onClick(e, id)}
             >
@@ -55,7 +66,7 @@ export const AccordionCard = ({ id, item, openCard, onClick, gaData }) => {
       {item.content?.body && (
         <div
           id={`card-body-${id}`}
-          className={classNames("collapse", { show: id === openCard })}
+          className={classNames("collapse", { show: isOpen })}
         >
           <div
             className="accordion-body"

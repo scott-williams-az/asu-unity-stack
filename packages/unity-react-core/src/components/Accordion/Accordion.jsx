@@ -12,39 +12,6 @@ const defaultGAEvent = {
   region: "main content",
 };
 
-const AVAILABLE_GA_ACTIONS = {
-  OPEN: "open",
-  CLOSE: "close",
-};
-
-/**
- *
- *
- *
- *
- *
- *
- *
- *
- *
- * TODO: I was not very thorough with this one and need to circle
- * back to it to make sure the react version is working
- * Do I still need AVAILABLE_GA_ACTIONS
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- */
 /**
  * @typedef {import('../../core/types/shared-types').AccordionProps} AccordionProps
  */

@@ -1,3 +1,11 @@
+# [@asu/unity-bootstrap-theme-v1.17.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.16.0...@asu/unity-bootstrap-theme-v1.17.0) (2024-12-09)
+
+
+### Features
+
+* **unity-bootstrap-theme:** added padding to a tags in card-link ([b4721a2](https://github.com/ASU/asu-unity-stack/commit/b4721a25d38c26da9403a4fbc00eb00096264674))
+* **unity-bootstrap-theme:** changed padding to mins to ensure that the minimums are corrects ([afe7cec](https://github.com/ASU/asu-unity-stack/commit/afe7cece6676b27b51257450468644b15e433772))
+
 # [@asu/unity-bootstrap-theme-v1.16.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.15.4...@asu/unity-bootstrap-theme-v1.16.0) (2024-11-28)
 
 

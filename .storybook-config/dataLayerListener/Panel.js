@@ -31,15 +31,17 @@ export const Panel = (props) => {
     setState((state) => ({ ...state, dataLayer: [] }));
   }
 
-
   const handleChange= (e) => {
     const {target: {value = ""}} = e;
-    console.log(value)
     setState((state) => ({ ...state, filter: value }));
   }
 
   const filteredData = dataLayer.filter(({event}) => {
-
+    /**
+     * A lot of events are logged with prefix "gtm." and creates a lot of noise,
+     * most of the time we just want to see the events we are triggering.
+     * Leaving the option to not filter out gtm events.
+     */
     if (filter.slice(0,1) === "") {
       return true;
     } else if (filter.slice(0,1) === "!" && filter.slice(1).length > 0) {

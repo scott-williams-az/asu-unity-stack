@@ -35,6 +35,33 @@ export const AnchorMenu = ({
   firstElementId,
   focusFirstFocusableElement = false,
 }) => {
+  /**
+   *
+   *
+   *
+   *
+   *
+   *
+   *
+   *
+   *
+   * TODO: Still needs attention, does not work with bootstrap
+   *
+   *
+   *
+   *
+   *
+   *
+   *
+   *
+   *
+   *
+   *
+   *
+   *
+   *
+   *
+   */
   const anchorMenuRef = useRef(null);
   const isSmallDevice = useMediaQuery("(max-width: 991px)");
   const [state, setState] = useState({

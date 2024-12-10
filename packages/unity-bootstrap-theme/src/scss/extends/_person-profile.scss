@@ -110,11 +110,10 @@ Desktop styles
       margin-left: 0;
       .person-contact-info {
         flex-direction: column;
-        li:nth-child(n+3) {
-          display: none;
-        }
       }
-      .description-and-social {
+      .description-and-social,
+      address.person-address
+      {
         display: none;
       }
       ul {
@@ -124,6 +123,7 @@ Desktop styles
     .profile-img-container {
       width: 100%;
       height: auto;
+      margin-bottom: 16px;
       .profile-img-placeholder {
         width: var(--grid-pic-size);
         height: var(--grid-pic-size);
@@ -141,7 +141,8 @@ Desktop styles
 Mobile Styles
 --------------------------------------------------------------*/
 @include media-breakpoint-down(md) {
-  .uds-person-profile {
+  .uds-person-profile
+  {
     max-width: 300px;
     flex-direction: column;
     .person {
@@ -163,6 +164,9 @@ Mobile Styles
           margin-left: 0;
         }
       }
+    }
+    &.uds-grid-profile {
+      max-width: var(--grid-info-size);
     }
   }
 }

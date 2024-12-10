@@ -121,7 +121,7 @@ const FacultyRankTabPanels = ({
 
   return (
     <TabbedPanels onTabChange={setTabChange}>
-      {Object.keys(filtersData).map(rankGroup => (
+      {Object.keys(tabs).map(rankGroup => (
         <Tab
           key={rankGroup}
           id={`faculty-${rankGroup}`}

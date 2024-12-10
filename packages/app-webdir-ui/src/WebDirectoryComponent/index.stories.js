@@ -21,7 +21,6 @@ const display = {
   doNotDisplayProfiles: "",
   profilesPerPage: "10",
   usePager: "1",
-  grid: "true",
 };
 const filters = {
   employee: "",
@@ -47,7 +46,7 @@ export const webDirectoryExampleDepartments = args => {
         API_URL="https://test-asu-isearch.ws.asu.edu"
         searchApiVersion="/api/v1/"
         filters={filters}
-        display={display}
+        display={{...display, grid: "true"}}
         alphaFilter={args.alphaFilter}
         // appPathFolder="/my/custom/path/to/component/root/example"
       />

@@ -247,7 +247,7 @@ const ASUSearchResultsList = ({
           {results.length > 0 && !isLoading ? (
             <div ref={searchList} className="results-found">
               {grid ? (
-                <Grid columns={{ sm: 1, lg: 2, xl: 3 }} gap={0}>
+                <Grid columns={{ sm: 1, lg: 2, xl: 3 }} gap={4}>
                   {results}
                 </Grid>
               ) : (

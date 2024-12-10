@@ -4,14 +4,14 @@ import React from "react";
 
 /**
  * @param {object} props
- * @param {React.ReactNode[]} props.children - Grid items
- * @param {object[]} props.items - Array of items to render
- * @param {Function} props.renderItem - Render function for items
+ * @param {React.ReactNode[]} [props.children] - Grid items
+ * @param {object[]} [props.items] - Array of items to render
+ * @param {Function} [props.renderItem] - Render function for items
  * @param {number|object} props.columns - Number of columns or responsive columns object
- * @param {number} props.gap - Bootstrap spacing (0-5)
- * @param {string} props.className - Additional class name
- * @param {string} props.rowClassName - Additional class name for row
- * @param {string} props.colClassName - Additional class name for column
+ * @param {0|1|2|3|4|5} props.gap - Bootstrap spacing (0-5)
+ * @param {string} [props.className] - Additional class name
+ * @param {string} [props.rowClassName] - Additional class name for row
+ * @param {string} [props.colClassName] - Additional class name for column
  * @returns {React.ReactNode} Grid component
  */
 
@@ -58,7 +58,7 @@ const Grid = ({
 
   return (
     <div className={`uds-grid ${className || ""}`}>
-      <div className={`row g-${30} ${rowClassName || ""}`}>
+      <div className={`row ${rowClassName || ""}`}>
         {renderContent()}
       </div>
     </div>
@@ -76,6 +76,7 @@ Grid.propTypes = {
       sm: PropTypes.number,
       md: PropTypes.number,
       lg: PropTypes.number,
+      xl: PropTypes.number,
     }),
   ]),
   gap: PropTypes.number,

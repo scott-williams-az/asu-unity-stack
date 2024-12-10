@@ -60,7 +60,7 @@ const SearchResultsList = styled.div`
 
     .uds-grid-profile {
       ul.person-contact-info {
-        gap: 4px;
+        gap: 8px;
       }
     }
     .person-address span {

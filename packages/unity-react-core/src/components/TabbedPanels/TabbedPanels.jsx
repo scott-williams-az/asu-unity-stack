@@ -1,4 +1,12 @@
 // @ts-nocheck
+/**
+ *
+ *
+ * TODO: Does not work with Bootstrap Framework
+ * Requires functionality UDS-1664
+ *
+ *
+ */
 import PropTypes from "prop-types";
 import React, { useState, useEffect, useRef, useCallback } from "react";
 
@@ -45,33 +53,6 @@ const TabbedPanels = ({
   bgColor = "",
   onTabChange = _ => {},
 }) => {
-  /**
-   *
-   *
-   *
-   *
-   *
-   *
-   *
-   *
-   *
-   * TODO: Still needs attention, does not work with bootstrap
-   *
-   *
-   *
-   *
-   *
-   *
-   *
-   *
-   *
-   *
-   *
-   *
-   *
-   *
-   *
-   */
   const childrenArray = React.Children.toArray(children);
   const isMounted = useRef(false);
   const [activeTabID, setActiveTabID] = useState(

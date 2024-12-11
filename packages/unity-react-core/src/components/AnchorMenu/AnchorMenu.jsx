@@ -1,4 +1,12 @@
 // @ts-check
+/**
+ *
+ *
+ * TODO: Does not work with Bootstrap Framework
+ * Requires functionality UDS-1664
+ *
+ *
+ */
 import classNames from "classnames";
 import PropTypes from "prop-types";
 import React, { useState, useEffect, useRef } from "react";
@@ -35,33 +43,6 @@ export const AnchorMenu = ({
   firstElementId,
   focusFirstFocusableElement = false,
 }) => {
-  /**
-   *
-   *
-   *
-   *
-   *
-   *
-   *
-   *
-   *
-   * TODO: Still needs attention, does not work with bootstrap
-   *
-   *
-   *
-   *
-   *
-   *
-   *
-   *
-   *
-   *
-   *
-   *
-   *
-   *
-   *
-   */
   const anchorMenuRef = useRef(null);
   const isSmallDevice = useMediaQuery("(max-width: 991px)");
   const [state, setState] = useState({

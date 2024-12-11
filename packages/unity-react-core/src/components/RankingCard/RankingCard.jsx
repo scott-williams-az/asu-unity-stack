@@ -29,8 +29,8 @@ const isSmallSize = size => size === AVAILABLE_SIZES.SMALL;
 
 const InfoLayerWrapper = ({ imageSize, body, heading, readMoreLink }) => {
   const [open, setOpen] = useState(false);
-  // TODO: Switch to useId when we upgrade to React 18
-  const { id, isReact, isBootstrap } = useBaseSpecificFramework();
+  const id = useId();
+  const { isReact, isBootstrap } = useBaseSpecificFramework();
   const uniqueId = `info-layer-${id}`;
   const isSmall = isSmallSize(imageSize);
   const handleButtonClick = event => {

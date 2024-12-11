@@ -1,3 +1,11 @@
+# [@asu/unity-bootstrap-theme-v1.18.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.17.0...@asu/unity-bootstrap-theme-v1.18.0) (2024-12-11)
+
+
+### Features
+
+* **unity-bootstrap-theme:** add grid styles ([1c4b32f](https://github.com/ASU/asu-unity-stack/commit/1c4b32f18b0cc83c3024d2a2097f6e79d581e925))
+* **unity-bootstrap-theme:** add grid view styles ([b092585](https://github.com/ASU/asu-unity-stack/commit/b092585eaedead8c8bb19189e633211ec2bede81))
+
 # [@asu/unity-bootstrap-theme-v1.17.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.16.0...@asu/unity-bootstrap-theme-v1.17.0) (2024-12-09)
 
 

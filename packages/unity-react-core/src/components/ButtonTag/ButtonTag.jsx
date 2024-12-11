@@ -4,7 +4,7 @@ import classNames from "classnames";
 import PropTypes from "prop-types";
 import React from "react";
 
-import { trackGAEvent } from "../../../../../shared";
+import { GaEventWrapper } from "../GaEventWrapper/GaEventWrapper";
 
 const gaDefaultObject = {
   name: "onclick",
@@ -15,7 +15,7 @@ const gaDefaultObject = {
 };
 
 /**
- * @typedef {import('../../core/types/shared-types').TagsProps} ButtonTagProps
+ * @typedef {React.ComponentProps<"button" | "a"> & import('../../core/types/shared-types').TagsProps} ButtonTagProps
  */
 
 /**
@@ -46,24 +46,23 @@ export const ButtonTag = ({
     Tag = "a";
   }
 
-  const handleClick = text => {
-    trackGAEvent({ ...gaDefaultObject, text, section: cardTitle });
-    onClick?.();
-  };
-
   return (
-    // @ts-ignore
-    <Tag
-      type={Tag === "button" && onClick ? "button" : undefined}
-      {...props}
-      className={btnClasses}
-      href={href}
-      ref={innerRef}
-      onClick={() => handleClick(label)}
-      aria-label={ariaLabel}
+    <GaEventWrapper
+      gaData={{ ...gaDefaultObject, text: label, section: cardTitle }}
     >
-      {label}
-    </Tag>
+      {/* @ts-ignore */}
+      <Tag
+        type={Tag === "button" && onClick ? "button" : undefined}
+        {...props}
+        className={btnClasses}
+        href={href}
+        ref={innerRef}
+        onClick={onClick}
+        aria-label={ariaLabel}
+      >
+        {label}
+      </Tag>
+    </GaEventWrapper>
   );
 };
 

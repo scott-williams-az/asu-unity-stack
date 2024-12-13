@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 import { allCookieConsentJS } from "../../../src/js/cookie-consent-full-screen.js";
+import "../../../src/css/cookie-consent-full-screen.css";
 
 export default {
   title: "Molecules/Cookie Consent",
+  // Forces reload of the story to keep css and js from persisting between stories
   decorators: [
     (storyFn, context) => {
       useEffect(() => {
@@ -25,13 +27,6 @@ export default {
 export const FullScreenBannerCookieConsent = () => {
   useEffect(() => {
     allCookieConsentJS();
-    const loadCSS = async () => {
-      const cssModule = await import("../../../src/css/cookie-consent-full-screen.css", {
-      assert: { type: 'css' }
-      });
-      document.adoptedStyleSheets = [cssModule.default];
-    };
-    loadCSS();
   }, []);
 
   return (

@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 import { allCookieConsentJS } from "../../../src/js/cookie-consent";
+import "../../../src/css/cookie-consent.css";
 
 export default {
   title: "Molecules/Cookie Consent",
+  // Forces reload of the story to keep css and js from persisting between stories
   decorators: [
     (storyFn, context) => {
       useEffect(() => {
@@ -23,13 +25,6 @@ export default {
 export const MaxWidthCookieConsent = () => {
   useEffect(() => {
     allCookieConsentJS();
-    const loadCSS = async () => {
-      const cssModule = await import("../../../src/css/cookie-consent.css", {
-      assert: { type: 'css' }
-      });
-      document.adoptedStyleSheets = [cssModule.default];
-    };
-    loadCSS();
   }, []);
 
   return (

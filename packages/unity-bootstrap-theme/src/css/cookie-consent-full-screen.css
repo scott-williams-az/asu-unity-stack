@@ -63,6 +63,7 @@
     flex-wrap: wrap !important;
     justify-content: center !important;
     flex: 1 1 400px;
+    gap: 1rem;
   }
 
   .cassie-pre-banner>.cassie-pre-banner--text  {

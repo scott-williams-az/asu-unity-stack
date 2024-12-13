@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import { allCookieConsentJS } from "../../../src/js/cookie-consent";
-import "../../../src/css/cookie-consent.css";
+import { allCookieConsentJS } from "../../../src/js/cookie-consent-full-screen.js";
+import "../../../src/css/cookie-consent-full-screen.css";
 
 import { fullLayoutDecorator } from "../../../../../shared/components/Layout";
 
@@ -9,12 +9,12 @@ export default {
   decorators: [ fullLayoutDecorator ],
   parameters: { controls: { disable: true } },
 };
-export const MaxWidthCookieConsent = () => {
+export const FullScreenBannerCookieConsent = () => {
   useEffect(() => {
     allCookieConsentJS();
   }, []);
 
   return (
-    <div></div>
+    <div id="full-screen"></div>
   );
 }

@@ -1,3 +1,10 @@
+# [@asu/app-webdir-ui-v4.0.1](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v4.0.0...@asu/app-webdir-ui-v4.0.1) (2024-12-16)
+
+
+### Bug Fixes
+
+* **app-webdir-ui:** updated grid profile styles ([d488ea1](https://github.com/asu/asu-unity-stack/commit/d488ea11ec49392eb67af54e032e683c8f274f25))
+
 # [@asu/app-webdir-ui-v4.0.0](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v3.6.4...@asu/app-webdir-ui-v4.0.0) (2024-12-11)
 
 

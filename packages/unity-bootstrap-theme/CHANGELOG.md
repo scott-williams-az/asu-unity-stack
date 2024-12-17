@@ -1,3 +1,10 @@
+# [@asu/unity-bootstrap-theme-v1.18.1](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.18.0...@asu/unity-bootstrap-theme-v1.18.1) (2024-12-17)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** added display block to card-link ([ae0fba0](https://github.com/ASU/asu-unity-stack/commit/ae0fba0855e29ace0d45ecd1bd4f4aaefe7396a8))
+
 # [@asu/unity-bootstrap-theme-v1.18.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.17.0...@asu/unity-bootstrap-theme-v1.18.0) (2024-12-11)
 
 

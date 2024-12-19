@@ -63,8 +63,7 @@ export const Modal: React.FC<ModalProps> = ({gaData}) => {
             id="closeModalButton"
             className="uds-modal-close-btn"
             icon={['fas', 'times']}
-          >
-          </ButtonIconOnly>
+          />
           </GaEventWrapper>
           <h1>Content</h1>
           <p>

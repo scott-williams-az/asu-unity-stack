@@ -7,7 +7,6 @@ const toolBar = `
           <div class="uds-quicklinks uds-quicklinks-expanded-md">
             <div id="collapseExample" class="card">
               <nav class="nav" aria-label="Same Page">
-                <a class="nav-link" href="modal.html"><span class="fas fa-hand-spock"></span>Modal</a>
                 <a class="nav-link" href="grid-links.html"><span class="fas fa-hand-spock"></span>GridLinks</a>
                 <a class="nav-link" href="accordion.html"><span class="fas fa-hand-spock"></span>Accordion</a>
                 <a class="nav-link" href="anchorMenu.html"><span class="fas fa-hand-spock"></span>Anchor Menu</a>

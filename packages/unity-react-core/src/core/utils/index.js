@@ -21,7 +21,6 @@ import { GridLinks } from "../../components/GridLinks/GridLinks.tsx";
 import { Hero } from "../../components/Hero/Hero";
 import { Image } from "../../components/Image/Image";
 import { List } from "../../components/List/List.tsx";
-import { Modal } from "../../components/Modal/Modal.tsx";
 import { Pagination } from "../../components/Pagination/Pagination";
 import { RankingCard } from "../../components/RankingCard/RankingCard";
 import { SystemAlert } from "../../components/SystemAlert/SystemAlert.tsx";
@@ -163,7 +162,3 @@ export const initTooltip = ({ targetSelector, props }) =>
  */
 export const initList = ({ targetSelector, props }) =>
   RenderReact(List, props, document.querySelector(targetSelector));
-
-// @param {ComponentProps} props
-export const initModal = ({ targetSelector, props }) =>
-  RenderReact(Modal, props, document.querySelector(targetSelector));

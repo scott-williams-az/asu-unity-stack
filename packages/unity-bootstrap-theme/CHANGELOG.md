@@ -1,3 +1,10 @@
+# [@asu/unity-bootstrap-theme-v1.18.2](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.18.1...@asu/unity-bootstrap-theme-v1.18.2) (2024-12-19)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** apply a11y breadcrumbs min size ([df962e1](https://github.com/ASU/asu-unity-stack/commit/df962e15f13f872a850cc2545e2af03ed24f896c))
+
 # [@asu/unity-bootstrap-theme-v1.18.1](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.18.0...@asu/unity-bootstrap-theme-v1.18.1) (2024-12-17)
 
 

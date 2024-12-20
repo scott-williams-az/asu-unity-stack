@@ -6,9 +6,16 @@ import {
 } from "./NotificationBanner";
 
 export default {
-  title: "More Examples/Notification Banner",
+  title: "Components/Notification Banner",
   component: NotificationBanner,
   args: { color: "orange" },
+  argTypes: {
+    children: {
+      table: {
+        disable: true,
+      },
+    },
+  },
   parameters: {
     docs: {
       description: {

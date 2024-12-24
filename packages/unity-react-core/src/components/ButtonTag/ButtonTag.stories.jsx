@@ -31,21 +31,22 @@ View component examples and source code below.
       },
     },
   },
+  decorators: [
+    Story => (
+      <div className="container-fluid">
+        <div className="col col-sm-12 p-3">
+          <Story />
+        </div>
+      </div>
+    ),
+  ],
 };
 
 const handleClick = e => {
   e.preventDefault();
 };
 
-const Template = args => {
-  return (
-    <div className="container-fluid">
-      <div className="col col-sm-12 p-3">
-        <ButtonTag {...args} />
-      </div>
-    </div>
-  );
-};
+const Template = args => <ButtonTag {...args} />;
 
 export const TagButton = Template.bind({});
 TagButton.args = {

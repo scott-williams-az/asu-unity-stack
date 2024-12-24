@@ -15,7 +15,7 @@ const gaDefaultObject = {
 };
 
 /**
- * @typedef {import('../../core/types/shared-types').ButtonProps} ButtonProps
+ * @typedef {import('../../core/types/shared-types').ButtonProps & import('react').ComponentProps<'button'>} ButtonProps
  */
 
 /**

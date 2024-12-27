@@ -20,15 +20,3 @@ export const Overview = {
     ...defaultProps,
   }
 };
-
-export const Story2 = {
-  render: args => {
-    return <div>
-        <Textarea {...args} />
-      </div>
-  },
-  args: {
-    ...defaultProps,
-    children: <p>paragraph</p>
-  }
-};

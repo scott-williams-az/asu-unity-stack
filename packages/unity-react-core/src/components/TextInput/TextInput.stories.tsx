@@ -1,8 +1,10 @@
+import type { Meta, StoryObj } from "@storybook/react";
 import React from "react";
 
 import { TextInput, propDefaults } from "./TextInput";
 
-export default {
+const meta: Meta<typeof TextInput> = {
+  tags: ["form", "input"],
   title: "Components/Form/Text Input",
   component: TextInput,
   argTypes: {
@@ -27,15 +29,18 @@ export default {
     ),
   ],
 };
+export default meta;
 
-const textInputTemplate = args => <TextInput {...args} />;
+type Story = StoryObj<typeof TextInput>;
 
-export const BasicInput = {
-  render: textInputTemplate.bind({}),
+export const BasicInput: Story = {
+  args: {
+    required: false,
+  },
+  tags: [""],
 };
 
-export const RequiredInput = {
-  render: textInputTemplate.bind({}),
+export const RequiredInput: Story = {
   args: {
     required: true,
   },

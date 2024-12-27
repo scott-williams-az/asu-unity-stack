@@ -692,6 +692,7 @@ __metadata:
     eslint-plugin-storybook: "npm:^0.6.15"
     file-loader: "npm:^6.2.0"
     glob: "npm:^7.1.6"
+    html-entities: "npm:^2.3.1"
     identity-obj-proxy: "npm:^3"
     jest: "npm:^26.6.3"
     jest-fetch-mock: "npm:^3.0.3"
@@ -705,6 +706,7 @@ __metadata:
     playwright: "npm:^1.48.0"
     plop: "npm:2.7.6"
     postcss: "npm:^8.4.19"
+    prettier: "npm:^2.8.7"
     prop-types: "npm:^15.7.2"
     react-share: "npm:^4.4.0"
     reactstrap: "npm:^9"
@@ -17278,7 +17280,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"html-entities@npm:^2.1.0":
+"html-entities@npm:^2.1.0, html-entities@npm:^2.3.1":
   version: 2.5.2
   resolution: "html-entities@npm:2.5.2"
   checksum: 10c0/f20ffb4326606245c439c231de40a7c560607f639bf40ffbfb36b4c70729fd95d7964209045f1a4e62fe17f2364cef3d6e49b02ea09016f207fde51c2211e481

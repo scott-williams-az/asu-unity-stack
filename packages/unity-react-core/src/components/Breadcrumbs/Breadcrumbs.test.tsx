@@ -59,9 +59,9 @@ describe("Breadcrumbs tests", () => {
   it("applies the correct background color", () => {
     const screen = renderComponent({
       ...defaultProps,
-      backgroundColor: "bg-gray-1",
+      backgroundColor: "bg-faint",
     });
     const nav = screen.getByRole("navigation");
-    expect(nav.firstChild).toHaveClass("bg-gray-1");
+    expect(nav.firstChild).toHaveClass("bg-faint");
   });
 });

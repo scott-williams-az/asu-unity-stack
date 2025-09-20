@@ -120,10 +120,12 @@ a {
     &:link,
     &:hover,
     &:focus {
-      color: $uds-color-base-gold !important;
+      --bs-link-color-rgb: var(--bs-gold-rgb);
+      // color: $uds-color-base-gold !important;
     }
     &:visited:not(.btn) {
-      color: $uds-color-base-darkgold !important;
+      --bs-link-color-rgb: var(--bs-darkgold-rgb);
+      // color: $uds-color-base-darkgold !important;
     }
   }
 

@@ -383,7 +383,7 @@ export interface PaginationProps {
   /**
    * Background of pagination
    */
-  background: "white" | "gray1" | "gray2" | "gray7";
+  background: "white" | "asu-gray-7" | "asu-gray-6" | "asu-gray-1";
   /**
    * Current page
    */

@@ -43,7 +43,7 @@ const c = {
   build: {
     emptyOutDir: true,
     sourcemap: true,
-    cssMinify: true,
+    cssMinify: false,
     cssCodeSplit: true,
     outDir: "dist",
     rollupOptions: {

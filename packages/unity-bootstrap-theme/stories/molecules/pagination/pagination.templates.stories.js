@@ -7,7 +7,7 @@ export default {
   argTypes: {
     bgColor: {
       name: "Background (With Border Only)",
-      options: ["None", "uds-bg-gray", "uds-bg-dark"],
+      options: ["None", "bg-faint", "bg-light", "bg-dark"],
       mapping: {
         None: "",
       },

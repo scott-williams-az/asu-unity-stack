@@ -1,7 +1,7 @@
 // @ts-check
 import { trackReactComponent } from "@asu/shared";
 import { throttle } from "@asu/shared/utils/timers";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import { HeaderMain } from "./components/HeaderMain";
 import { AppContextProvider } from "./core/context/app-context";
@@ -51,6 +51,37 @@ const ASUHeader = ({
    * @type {React.MutableRefObject<HTMLDivElement?>}
    */
   const headerRef = useRef(null);
+  const mobileMenuToggleRef = useRef(null);
+
+  const [itemOpened, setStateItemOpened] = useState(undefined);
+  const [mobileMenuOpen, setStateMobileMenuOpen] = useState(false);
+  const [headerHeight, setHeaderHeight] = useState(150);
+  const [headerTop, setHeaderTop] = useState(0);
+
+  const setItemOpened = (openState = undefined) => {
+    setStateItemOpened(openState);
+  };
+
+  const setMobileMenuOpen = (openState = false) => {
+    if (
+      mobileMenuToggleRef?.current &&
+      typeof mobileMenuToggleRef.current.focus === "function"
+    ) {
+      mobileMenuToggleRef.current.focus();
+    }
+
+    setStateMobileMenuOpen(openState);
+  };
+
+  const singlePageAppReset = () => {
+    if (headerRef?.current) {
+      headerRef.current.focus();
+      window.scrollTo(0, 0);
+    }
+    setMobileMenuOpen();
+    setItemOpened();
+    document.body.style.overflow = "unset";
+  };
 
   const handleWindowScroll = () => {
     const curPos = window.scrollY;
@@ -60,6 +91,9 @@ const ASUHeader = ({
     } else {
       headerRef.current.classList.remove("scrolled");
     }
+
+    setHeaderTop(headerRef.current.getBoundingClientRect().top);
+    setHeaderHeight(headerRef.current.getBoundingClientRect().bottom);
   };
 
   useEffect(() => {
@@ -80,6 +114,13 @@ const ASUHeader = ({
       });
     }
   }, []);
+
+  useEffect(() => {
+    if (headerRef?.current) {
+      setHeaderHeight(headerRef.current.getBoundingClientRect().bottom);
+      setHeaderTop(headerRef.current.getBoundingClientRect().top);
+    }
+  }, [headerRef, mobileMenuOpen]);
 
   useEffect(() => {
     const throttledScroll = () => throttle(handleWindowScroll, 100);
@@ -125,6 +166,14 @@ const ASUHeader = ({
         mobileNavTree,
         hasNavigation: !!navTree?.length || !!mobileNavTree?.length,
         searchUrl,
+        headerTop,
+        headerHeight,
+        itemOpened,
+        setItemOpened,
+        mobileMenuOpen,
+        setMobileMenuOpen,
+        singlePageAppReset,
+        mobileMenuToggleRef,
         site,
       }}
     >
